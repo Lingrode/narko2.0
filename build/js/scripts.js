@@ -1,47 +1,4 @@
 // Custom Scripts
-// Custom scripts
-/*$(function () {
-  $('.header-nav__list-item').hover(
-    function () {
-      $(this).children('div').addClass('visible');
-    }, function () {
-      $(this).children('div').removeClass('visible');
-    }
-  );
-
-  //let menuLink = $('.header-nav__list-link');
-  let menuItem = $('.header-nav__list-item');
-  // menuItem.each(function() {
-  menuItem.hover(
-    function () {
-      $(this).addClass('hovered');
-    },
-    function () {
-      $(this).removeClass('hovered');
-    }
-  )
-});*/
-
-// $(function () {
-//   $(".header-nav__list-item").hover(
-//     function () {
-//       $(this).children("div").addClass("visible");
-//     },
-//     function () {
-//       $(this).children("div").removeClass("visible");
-//     }
-//   );
-//   let menuItem = $(".header-nav__list-item");
-//   menuItem.hover(
-//     function () {
-//       $(this).addClass("hovered");
-//     },
-//     function () {
-//       $(this).removeClass("hovered");
-//     }
-//   );
-// });
-
 const vis = document.querySelectorAll(".header-nav__list-item");
 const drop = document.querySelectorAll(".dropdown-menu");
 
