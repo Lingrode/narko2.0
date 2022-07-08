@@ -22,7 +22,7 @@
       &-location {
         @extend %text;
         color: $color-black;
-        font-family: "Rubik-Medium", sans-serif;
+        font-weight: 700;
         span {
           color: $color-green;
         }
@@ -34,7 +34,6 @@
       &-schedule {
         position: relative;
         @extend %text;
-        font-family: "Rubik-Regular", sans-serif;
         color: $color-black;
         padding-left: 26px;
         &::before {
@@ -69,14 +68,14 @@
       align-items: center;
       &-phone {
         @extend %text;
+        font-weight: 700;
         color: #000;
-        font-family: "Rubik-Medium", sans-serif;
         white-space: nowrap;
         display: block;
       }
       &-call {
-        font-family: "Rubik-Medium", sans-serif;
         @extend %text;
+        font-weight: 700;
         margin-left: 25px;
         margin-right: 40px;
         display: inline-block;
@@ -136,6 +135,7 @@
         width: 100%;
         .menu-container {
           display: flex;
+          gap: 70px;
           justify-content: space-between;
           width: 100%;
         }
@@ -158,9 +158,9 @@
           width: 100%;
         }
         &__list-title {
-          font-family: "Rubik-Bold", sans-serif;
           margin-bottom: 18px;
           color: $color-black;
+          font-weight: 700;
         }
         &__list-item {
           padding-bottom: 10px;
@@ -187,7 +187,6 @@
           align-items: center;
           @extend %text;
           color: $color-black;
-          font-family: "Rubik-Regular", sans-serif;
           transition: all 0.3s;
           &:hover {
             color: $color-green;
@@ -215,7 +214,6 @@
     }
     &__list-link {
       @extend %text;
-      font-family: "Rubik-Regular", sans-serif;
       color: $color-black;
       display: flex;
       align-items: center;

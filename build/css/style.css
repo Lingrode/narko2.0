@@ -80,10 +80,14 @@ h6 {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
 }
 
 body.locked {
@@ -154,7 +158,7 @@ body.locked {
 
 .header-menu__left-location {
   color: #162629;
-  font-family: "Rubik-Medium", sans-serif;
+  font-weight: 700;
 }
 
 .header-menu__left-location span {
@@ -171,7 +175,6 @@ body.locked {
 
 .header-menu__left-schedule {
   position: relative;
-  font-family: "Rubik-Regular", sans-serif;
   color: #162629;
   padding-left: 26px;
 }
@@ -218,14 +221,14 @@ body.locked {
 }
 
 .header-menu__right-phone {
+  font-weight: 700;
   color: #000;
-  font-family: "Rubik-Medium", sans-serif;
   white-space: nowrap;
   display: block;
 }
 
 .header-menu__right-call {
-  font-family: "Rubik-Medium", sans-serif;
+  font-weight: 700;
   margin-left: 25px;
   margin-right: 40px;
   display: inline-block;
@@ -309,6 +312,7 @@ body.locked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 70px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -342,9 +346,9 @@ body.locked {
 }
 
 .header-nav__list-item .dropdown-menu__list-title {
-  font-family: "Rubik-Bold", sans-serif;
   margin-bottom: 18px;
   color: #162629;
+  font-weight: 700;
 }
 
 .header-nav__list-item .dropdown-menu__list-item {
@@ -374,7 +378,6 @@ body.locked {
       -ms-flex-align: center;
           align-items: center;
   color: #162629;
-  font-family: "Rubik-Regular", sans-serif;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -408,7 +411,6 @@ body.locked {
 }
 
 .header-nav__list-link {
-  font-family: "Rubik-Regular", sans-serif;
   color: #162629;
   display: -webkit-box;
   display: -ms-flexbox;
