@@ -1,6 +1,6 @@
 // Container & Breakpoints
 @use 'sass:math';
-$containerWidth: 1200;
+$containerWidth: 1400;
 $containerPadding: 40;
 $containerSidePadding: math.div($containerPadding, 2);
 $breakpoint1450: 1449.98 + px;
@@ -25,14 +25,14 @@ $color-grey: #a2a8a9;
 $color-grey-lighter: #d0d3d4;
 
 %title-h1 {
-  font-family: "Rubik-Bold", sans-serif;
+  font-weight: 700;
   font-size: 64px;
   line-height: 120%;
   color: $color-black;
 }
 
 %title-h2 {
-  font-family: "Rubik-Bold", sans-serif;
+  font-weight: 700;
   font-size: 48px;
   line-height: 120%;
   color: $color-black;
