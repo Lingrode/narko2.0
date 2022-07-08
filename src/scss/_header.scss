@@ -51,7 +51,7 @@
           padding-right: 30px;
         }
         &:first-child::before {
-          background-image: url("../images/icons/place.svg");
+          background-image: url("../img/icons/place.svg");
         }
         &:first-child::after {
           content: "\00B7";
@@ -60,7 +60,7 @@
           right: 6%;
         }
         &:last-child::before {
-          background-image: url("../images/icons/time.svg");
+          background-image: url("../img/icons/access-time.svg");
         }
       }
     }

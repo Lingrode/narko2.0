@@ -194,7 +194,7 @@ body.locked {
 }
 
 .header-menu__left-schedule:first-child::before {
-  background-image: url("../images/icons/place.svg");
+  background-image: url("../img/icons/place.svg");
 }
 
 .header-menu__left-schedule:first-child::after {
@@ -205,7 +205,7 @@ body.locked {
 }
 
 .header-menu__left-schedule:last-child::before {
-  background-image: url("../images/icons/time.svg");
+  background-image: url("../img/icons/access-time.svg");
 }
 
 .header-menu__right {
@@ -429,8 +429,9 @@ body.locked {
   transition: all 0.3s ease-out;
 }
 
-footer {
-  display: block;
+.top {
+  background-image: url("../img/top-bg.jpg");
+  height: 100%;
 }
 
 @media (max-width: 1449.98px) {
