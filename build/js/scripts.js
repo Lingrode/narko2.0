@@ -1,3 +1,4 @@
+// Custom Scripts
 // Custom scripts
 $(function () {
 	$('.header-nav__list-item').hover(
