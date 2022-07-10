@@ -47,6 +47,7 @@ function browserSync(params) {
         },
         port: 3000,
         notify: false,
+        tunnel: true
     })
 }
 

@@ -2056,6 +2056,32 @@ button.swiper-pagination-bullet {
   .accordion .dropdown-menu__list-link span {
     max-width: 250px;
   }
+
+  .top__box {
+    top: 10px;
+    left: 20px;
+    max-width: unset;
+  }
+
+  .top__title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .top__text {
+    font-size: 9px;
+    margin-bottom: 10px;
+    line-height: 14px;
+    max-width: 175px;
+  }
+
+  .top__btn {
+    font-size: 10px;
+    padding: 5px 10px;
+    line-height: 16px;
+    max-width: 80px;
+    border-radius: 8px;
+  }
 }
 
 @media (max-width: 450px) {
