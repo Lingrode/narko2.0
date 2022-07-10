@@ -79,7 +79,7 @@
     border: 2px solid #fff;
     opacity: 1;
     cursor: pointer;
-
+    transition: 0.2s all;
     @media (max-width: $breakpoint768) {
       border: 1px solid #fff;
       width: 6px;

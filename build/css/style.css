@@ -138,6 +138,11 @@ body.locked {
   position: relative;
 }
 
+.header__logo {
+  width: 105px;
+  height: 105px;
+}
+
 .header-menu-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,6 +514,7 @@ body.locked {
 }
 
 .header-menu__burger-wrapper svg {
+  cursor: pointer;
   position: absolute;
   left: -100px;
 }
@@ -794,6 +800,9 @@ body.locked {
   border: 2px solid #fff;
   opacity: 1;
   cursor: pointer;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
 }
 
 .top .swiper-pagination-bullet-active {
@@ -1671,6 +1680,10 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1250px) {
+  .header-menu-top {
+    padding-bottom: 5px;
+  }
+
   .header-menu__left-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1808,6 +1821,7 @@ button.swiper-pagination-bullet {
 
   .accordion .dropdown-menu {
     padding: 0;
+    background-color: inherit;
   }
 
   .accordion .dropdown-menu .menu-container {
@@ -1815,6 +1829,12 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .accordion .dropdown-menu-2,
+  .accordion .dropdown-menu-3,
+  .accordion .dropdown-menu-4 {
+    max-width: 100%;
   }
 
   .accordion .dropdown-menu__list {
@@ -1852,12 +1872,6 @@ button.swiper-pagination-bullet {
     font-size: 14px;
     padding: 10px 35px;
     max-width: 150px;
-  }
-}
-
-@media (max-width: 991.98px) and (max-width: 330px) {
-  .header-menu__left .header-menu__right .header-menu__right-call {
-    padding: 12px 12px;
   }
 }
 
@@ -1978,7 +1992,7 @@ button.swiper-pagination-bullet {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 25px 30px;
+    padding: 25px;
   }
 }
 
@@ -2057,8 +2071,30 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 370px) {
+  .header-menu__left .header-menu__right {
+    gap: 15px;
+  }
+
+  .header-menu__left-location {
+    font-size: 14px;
+  }
+
+  .header-menu__left-schedule {
+    font-size: 14px;
+  }
+
+  .header-menu__right-phone {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .header-menu__right-call {
+    padding: 6px 12px;
+  }
+
   .header-menu__burger-wrapper svg {
-    left: -30px;
-    bottom: -50px;
+    left: -65px;
+    width: 50px;
+    height: 20px;
   }
 }

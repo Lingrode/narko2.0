@@ -11,6 +11,8 @@
     }
   }
   &__logo {
+    width: 105px;
+    height: 105px;
     @media (max-width: $breakpoint992) {
       width: 50px;
       height: 50px;
@@ -21,6 +23,9 @@
     justify-content: space-between;
     padding-bottom: 15px;
     border-bottom: 1px solid $color-white;
+    @media (max-width: 1250px) {
+      padding-bottom: 5px;
+    }
   }
   &-menu {
     margin-left: 70px;
@@ -57,14 +62,14 @@
           gap: 20px;
           .header-menu__right-call {
             margin: 0;
-            @media (max-width: 330px) {
-              padding: 12px 12px;
-            }
           }
         }
         @media (max-width: 550px) {
           flex-direction: column;
           align-items: flex-start;
+        }
+        @media (max-width: 370px) {
+          gap: 15px;
         }
       }
       &-location {
@@ -72,6 +77,9 @@
         @extend %text;
         color: $color-black;
         font-weight: 700;
+        @media (max-width: 370px) {
+          font-size: 14px;
+        }
         span {
           color: $color-green;
         }
@@ -89,6 +97,9 @@
         @extend %text;
         color: $color-black;
         padding-left: 26px;
+        @media (max-width: 370px) {
+          font-size: 14px;
+        }
         &::before {
           content: "";
           position: absolute;
@@ -132,6 +143,10 @@
         white-space: nowrap;
         display: block;
         transition: 0.3s all;
+        @media (max-width: 370px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
         &:hover {
           opacity: 0.5;
         }
@@ -157,6 +172,9 @@
           font-size: 14px;
           margin-left: 20px;
           margin-right: 20px;
+        }
+        @media (max-width: 370px) {
+          padding: 6px 12px;
         }
       }
       &-btn {
@@ -369,14 +387,16 @@
   position: relative;
   z-index: 100;
   svg {
+    cursor: pointer;
     position: absolute;
     left: -100px;
     @media (max-width: 450px) {
       left: -80px;
     }
     @media (max-width: 370px) {
-      left: -30px;
-      bottom: -50px;
+      left: -65px;
+      width: 50px;
+      height: 20px;
     }
   }
 }
@@ -410,7 +430,7 @@
       @media (max-width: $breakpoint992) {
         justify-content: start;
         align-items: flex-start;
-        padding: 25px 30px;
+        padding: 25px;
       }
     }
   }
@@ -544,6 +564,7 @@
     }
     @media (max-width: $breakpoint992) {
       padding: 0;
+      background-color: inherit;
     }
     .menu-container {
       display: flex;
@@ -574,6 +595,9 @@
           white-space: normal;
           width: 270px;
         }
+      }
+      @media (max-width: $breakpoint992) {
+        max-width: 100%;
       }
     }
     &-2 {

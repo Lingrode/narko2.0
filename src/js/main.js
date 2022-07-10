@@ -69,5 +69,11 @@ accordion();
 const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
+  },
+  speed: 800,
+  autoplay: {
+    enabled: true,
+    delay: 5000,
   },
 });
