@@ -19,7 +19,8 @@
     <header class="header">
   <div class="container">
     <div class="header__inner">
-      <img class="header__logo" src="../img/logo.png" alt="logo" />
+      <a href="#"><img class="header__logo" src="../img/logo.png" alt="logo" /></a>
+
       <div class="header-menu">
         <div class="header-menu-top">
           <div class="header-menu__left">
@@ -1297,15 +1298,20 @@
         </nav>
         <div class="accordion">
           <div class="accordion__item">
-            <div class="accordion__item-trigger">
-              <div class="trigger__text">Наркомания</div>
-              <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 15l-4.2-4.2 1.4-1.5 2.8 2.9 2.8-2.9 1.4 1.5L12 15z"
-                  fill="#A2A8A9"
-                ></path>
-              </svg>
+            <div class="trigger__text-wrapper">
+              <a href="#1" class="trigger__text-link">Наркомания</a>
+              <div class="accordion__item-trigger">
+                <div class="accordion__item-svg">
+                  <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 15l-4.2-4.2 1.4-1.5 2.8 2.9 2.8-2.9 1.4 1.5L12 15z"
+                      fill="#A2A8A9"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
             </div>
+
             <div class="accordion__item-content">
               <div class="dropdown-menu dropdown-menu-1">
                 <div class="menu-container">
@@ -1817,14 +1823,18 @@
             </div>
           </div>
           <div class="accordion__item">
-            <div class="accordion__item-trigger">
-              <div class="trigger__text">Алкоголизм</div>
-              <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 15l-4.2-4.2 1.4-1.5 2.8 2.9 2.8-2.9 1.4 1.5L12 15z"
-                  fill="#A2A8A9"
-                ></path>
-              </svg>
+            <div class="trigger__text-wrapper">
+              <a href="#1" class="trigger__text-link">Алкоголизм</a>
+              <div class="accordion__item-trigger">
+                <div class="accordion__item-svg">
+                  <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 15l-4.2-4.2 1.4-1.5 2.8 2.9 2.8-2.9 1.4 1.5L12 15z"
+                      fill="#A2A8A9"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
             </div>
             <div class="accordion__item-content">
               <div class="dropdown-menu dropdown-menu-2">
@@ -2044,14 +2054,18 @@
             </div>
           </div>
           <div class="accordion__item">
-            <div class="accordion__item-trigger">
-              <div class="trigger__text">Другие зависимости</div>
-              <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 15l-4.2-4.2 1.4-1.5 2.8 2.9 2.8-2.9 1.4 1.5L12 15z"
-                  fill="#A2A8A9"
-                ></path>
-              </svg>
+            <div class="trigger__text-wrapper">
+              <a href="#1" class="trigger__text-link">Другие зависимости</a>
+              <div class="accordion__item-trigger">
+                <div class="accordion__item-svg">
+                  <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 15l-4.2-4.2 1.4-1.5 2.8 2.9 2.8-2.9 1.4 1.5L12 15z"
+                      fill="#A2A8A9"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
             </div>
             <div class="accordion__item-content">
               <div class="dropdown-menu dropdown-menu-3">
@@ -2324,14 +2338,18 @@
             </div>
           </div>
           <div class="accordion__item">
-            <div class="accordion__item-trigger">
-              <div class="trigger__text">Клиника</div>
-              <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 15l-4.2-4.2 1.4-1.5 2.8 2.9 2.8-2.9 1.4 1.5L12 15z"
-                  fill="#A2A8A9"
-                ></path>
-              </svg>
+            <div class="trigger__text-wrapper">
+              <a href="#1" class="trigger__text-link">Клиника</a>
+              <div class="accordion__item-trigger">
+                <div class="accordion__item-svg">
+                  <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 15l-4.2-4.2 1.4-1.5 2.8 2.9 2.8-2.9 1.4 1.5L12 15z"
+                      fill="#A2A8A9"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
             </div>
             <div class="accordion__item-content">
               <div class="dropdown-menu dropdown-menu-4">
@@ -2509,7 +2527,8 @@
 </header>
 
     <!-- Main Page -->
-    <main><section class="top swiper">
+    <main>
+      <section class="top swiper">
   <div class="swiper-wrapper">
     <div class="top__block swiper-slide">
       <img class="top__img" src="../img/top-bg.jpg" alt="bg" />
@@ -2583,7 +2602,35 @@
   </div>
   <div class="swiper-pagination"></div>
 </section>
-</main>
+
+      
+      <section class="about-wrapper">
+  <div class="container">
+    <div class="about">
+      <div class="about__info">
+        <h1 class="about__info-title">О компании</h2>
+        <p class="about__info-descr">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+          consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet
+          minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+          consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </p>
+        <p class="about__info-descr">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+          consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </p>
+      </div>
+      <div class="about__video">
+        <img src="img/videoPng.png" alt="videoPng" />
+        <span class="about__video-descr">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
     <!-- Footer -->
     
   </body>

@@ -42,7 +42,6 @@ function burgerMenu() {
   const burger = document.querySelector(".burger");
   const burgerGlass = document.querySelector(".header-menu__burger-wrapper svg");
   const menu = document.querySelector(".header-menu");
-
   burger.addEventListener("click", () => {
     if (!menu.classList.contains("active")) {
       menu.classList.add("active");
@@ -70,10 +69,10 @@ function accordion() {
   items.forEach((item) => {
     item.addEventListener("click", () => {
       const parent = item.parentNode;
-      if (parent.classList.contains("accordion__item-active")) {
-        parent.classList.remove("accordion__item-active");
+      if (parent.parentNode.classList.contains("accordion__item-active")) {
+        parent.parentNode.classList.remove("accordion__item-active");
       } else {
-        parent.classList.add("accordion__item-active");
+        parent.parentNode.classList.add("accordion__item-active");
       }
     });
   });
@@ -87,6 +86,7 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
   speed: 800,
+  loop: true,
   autoplay: {
     enabled: true,
     delay: 5000,
