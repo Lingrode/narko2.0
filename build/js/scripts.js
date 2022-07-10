@@ -93,3 +93,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+let elem = document.querySelector('.benefits__inner-pic');
+
+e.addEventListener('click', () => {
+})
