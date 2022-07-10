@@ -1878,12 +1878,12 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 991.98px) {
   .header-menu {
     position: fixed;
-    background: #f9fafb;
+    background: white;
     overflow-y: scroll;
     left: 0;
     top: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: none;
   }
 
@@ -1893,8 +1893,8 @@ button.swiper-pagination-bullet {
     display: flex;
     left: 0;
     top: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
