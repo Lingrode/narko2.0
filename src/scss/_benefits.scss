@@ -1,0 +1,70 @@
+.benefits {
+  padding: 135px 0 154px;
+
+  &__title {
+    @extend %title-h1;
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 48px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-text {
+      margin-left: 24px;
+      font-size: 24px;
+      line-height: 150%;
+      span {
+        font-size: 16px;
+        display: block;
+      }
+    }
+
+    &-pic {
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 70px;
+        right: -45px;
+        width: 120px;
+        height: 120px;
+        background-image: url("../img/icons/arrow-down1.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 14px;
+        animation: anim 1.5s infinite;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+  }
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
