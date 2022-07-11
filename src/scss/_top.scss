@@ -1,78 +1,79 @@
 .top {
-  padding-top: 117px;
+  // padding-top: 178px !important;
+  background-color: #f9fafb;
   @media (max-width: $breakpoint992) {
-    padding-top: 66px;
+    padding-top: 100px !important;
+  }
+  .container {
   }
   &__block {
-    @media (max-width: $breakpoint480) {
-      background-color: #f9fafb;
-    }
-  }
-  &__img {
-    width: 100%;
-
-    @media (max-width: $breakpoint480) {
-      display: none;
+    background-image: url(../img/top-bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    @media (max-width: $breakpoint992) {
+      background-image: url(../img/top-bg-fixed-opacity.png);
+      background-position: 100% 60%;
     }
   }
   &__box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 340px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
-    @media (max-width: $breakpoint992) {
-      top: 5%;
-      left: 60px;
-      transform: unset;
+    max-width: 500px;
+    padding-top: 178px;
+    padding-bottom: 213px;
+    @media (max-width: 1800px) {
+      padding-top: 170px;
+      padding-bottom: 170px;
+    }
+    @media (max-width: 1700px) {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+    @media (max-width: 1600px) {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+    @media (max-width: $breakpoint1450) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @media (max-width: 1300px) {
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+    @media (max-width: 1200px) {
+      padding-top: 60px;
+      padding-bottom: 20px;
     }
     @media (max-width: $breakpoint992) {
-      top: 12%;
-      left: 40px;
-    }
-    @media (max-width: $breakpoint480) {
-      position: unset;
-      padding: 40px 0;
+      padding-top: 20px;
+      padding-bottom: 100px;
     }
   }
   &__title {
     @extend %title-h1;
     margin-bottom: 24px;
-
-    @media (max-width: $breakpoint1450) {
-      font-size: 52px;
-    }
     @media (max-width: $breakpoint992) {
-      font-size: 42px;
+      font-size: 50px;
       margin-bottom: 20px;
     }
-    @media (max-width: $breakpoint768) {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
     @media (max-width: $breakpoint480) {
-      font-size: 20px;
+      font-size: 36px;
       margin-bottom: 10px;
     }
   }
   &__text {
-    @extend %text;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #162629;
     margin-bottom: 40px;
-
     @media (max-width: $breakpoint992) {
-      font-size: 14px;
+      font-size: 18px;
       margin-bottom: 20px;
-    }
-    @media (max-width: $breakpoint768) {
-      font-size: 12px;
-      margin-bottom: 15px;
-    }
-    @media (max-width: $breakpoint480) {
-      font-size: 12px;
-      margin-bottom: 10px;
     }
   }
   &__btn {
@@ -84,26 +85,14 @@
     border-radius: 12px;
     padding: 16px 40px;
     max-width: 170px;
-
     @media (max-width: $breakpoint992) {
-      font-size: 14px;
       padding: 10px 35px;
       max-width: 150px;
     }
-    @media (max-width: $breakpoint768) {
-      font-size: 12px;
-      padding: 7px 25px;
-      max-width: 120px;
-    }
-    @media (max-width: $breakpoint480) {
-      font-size: 10px;
-      padding: 5px 10px;
-      line-height: 16px;
-      max-width: 80px;
-      border-radius: 8px;
-    }
   }
   .swiper-pagination-bullet {
+    position: relative;
+    bottom: 17px;
     width: 8px;
     height: 8px;
     background: transparent;
@@ -111,21 +100,19 @@
     border: 2px solid #fff;
     opacity: 1;
     cursor: pointer;
-    transition: 0.2s all;
-    @media (max-width: $breakpoint768) {
-      border: 1px solid #fff;
-      width: 6px;
-      height: 6px;
+    transition: 0.2s all ease-in-out;
+    @media (max-width: $breakpoint992) {
+      border: 1px solid #56bb90;
+      margin-right: 6px !important;
+      width: 10px;
+      height: 10px;
+      bottom: 30px;
     }
     &-active {
-      width: 24px;
+      width: 24px !important;
       background-color: #fff;
-
-      @media (max-width: $breakpoint768) {
-        width: 20px;
-      }
-      @media (max-width: $breakpoint480) {
-        width: 16px;
+      @media (max-width: $breakpoint992) {
+        background-color: #56bb90;
       }
     }
   }
