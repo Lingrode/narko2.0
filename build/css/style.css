@@ -127,6 +127,7 @@ body.locked {
 }
 
 .header {
+  z-index: 999;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -814,6 +815,10 @@ body.locked {
 
 .accordion.hovered .header-nav__list-link svg path {
   fill: #56bb90;
+}
+
+.top {
+  padding-top: 117px;
 }
 
 .top__img {
@@ -2089,6 +2094,10 @@ button.swiper-pagination-bullet {
     max-width: 100%;
   }
 
+  .top {
+    padding-top: 66px;
+  }
+
   .top__box {
     top: 5%;
     left: 60px;
@@ -2318,7 +2327,7 @@ button.swiper-pagination-bullet {
   }
 
   .top__block {
-    background-color: #d0d3d4;
+    background-color: #f9fafb;
   }
 
   .top__img {

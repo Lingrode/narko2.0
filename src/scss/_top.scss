@@ -1,7 +1,11 @@
 .top {
+  padding-top: 117px;
+  @media (max-width: $breakpoint992) {
+    padding-top: 66px;
+  }
   &__block {
     @media (max-width: $breakpoint480) {
-      background-color: #d0d3d4;
+      background-color: #f9fafb;
     }
   }
   &__img {

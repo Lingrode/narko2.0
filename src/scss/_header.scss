@@ -1,5 +1,6 @@
 // Header
 .header {
+  z-index: 999;
   flex: 0 0 auto;
   @media (max-width: $breakpoint992) {
     position: fixed;
