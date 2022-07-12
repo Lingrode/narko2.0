@@ -1,0 +1,101 @@
+.requestShort {
+  background-image: url(../img/request-bg.png);
+  .form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 0;
+    gap: 25px;
+    @media (max-width: 1220px) {
+      flex-direction: column;
+    }
+    @media (max-width: $breakpoint480) {
+      padding: 70px 0;
+    }
+    // .form__text-title
+    &__text-title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 120%;
+      color: #162629;
+      padding-bottom: 4px;
+    }
+    // .form__text-descr
+    &__text-descr {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: #4b5355;
+    }
+    // .form__input
+    &__input {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 24px;
+      @media (max-width: $breakpoint1450) {
+        gap: 12px;
+      }
+      @media (max-width: $breakpoint992) {
+        flex-direction: column;
+      }
+    }
+    // .form__input-item
+    &__input-item {
+      width: 380px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #a2a8a9;
+      outline: none;
+      padding: 16px 48px;
+      border-radius: 12px;
+      @media (max-width: $breakpoint1450) {
+        width: 340px;
+      }
+      @media (max-width: $breakpoint480) {
+        width: 80vw;
+      }
+    }
+    &__input-firstName,
+    &__input-phone {
+      position: relative;
+    }
+    // .form__input-firstName
+    &__input-firstName::after {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/firstName-icon.svg);
+    }
+    // .form__input-number
+    &__input-phone::after {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/tel-icon.svg);
+    }
+    // .form__input-sent
+    &__input-sent {
+      cursor: pointer;
+      width: 165px;
+      height: 56px;
+      border-radius: 12px;
+      background: #56bb90;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      @media (max-width: $breakpoint480) {
+        width: 50vw;
+        margin-top: 16px;
+      }
+    }
+  }
+}

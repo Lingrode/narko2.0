@@ -33,6 +33,7 @@
 *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
 }
 
 aside,
@@ -95,10 +96,6 @@ h6 {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
 }
 
 body.locked {
@@ -1047,6 +1044,101 @@ body.locked {
   color: #162629;
 }
 
+.requestShort {
+  background-image: url(../img/request-bg.png);
+}
+
+.requestShort .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 120px 0;
+  gap: 25px;
+}
+
+.requestShort .form__text-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  color: #162629;
+  padding-bottom: 4px;
+}
+
+.requestShort .form__text-descr {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4b5355;
+}
+
+.requestShort .form__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 24px;
+}
+
+.requestShort .form__input-item {
+  width: 380px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a2a8a9;
+  outline: none;
+  padding: 16px 48px;
+  border-radius: 12px;
+}
+
+.requestShort .form__input-firstName,
+.requestShort .form__input-phone {
+  position: relative;
+}
+
+.requestShort .form__input-firstName::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/firstName-icon.svg);
+}
+
+.requestShort .form__input-phone::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/tel-icon.svg);
+}
+
+.requestShort .form__input-sent {
+  cursor: pointer;
+  width: 165px;
+  height: 56px;
+  border-radius: 12px;
+  background: #56bb90;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
 /**
  * Swiper 7.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1936,6 +2028,14 @@ button.swiper-pagination-bullet {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+
+  .requestShort .form__input {
+    gap: 12px;
+  }
+
+  .requestShort .form__input-item {
+    width: 340px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -1999,6 +2099,15 @@ button.swiper-pagination-bullet {
 
   .accordion .dropdown-menu-4 {
     left: -140%;
+  }
+}
+
+@media (max-width: 1220px) {
+  .requestShort .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -2192,6 +2301,13 @@ button.swiper-pagination-bullet {
   .about__info-title {
     font-size: 50px;
   }
+
+  .requestShort .form__input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -2374,6 +2490,19 @@ button.swiper-pagination-bullet {
   .about__video-descr {
     font-size: 12px;
     text-align: center;
+  }
+
+  .requestShort .form {
+    padding: 70px 0;
+  }
+
+  .requestShort .form__input-item {
+    width: 80vw;
+  }
+
+  .requestShort .form__input-sent {
+    width: 50vw;
+    margin-top: 16px;
   }
 }
 

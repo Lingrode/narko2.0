@@ -1,10 +1,7 @@
 .top {
-  // padding-top: 178px !important;
   background-color: #f9fafb;
   @media (max-width: $breakpoint992) {
     padding-top: 100px !important;
-  }
-  .container {
   }
   &__block {
     background-image: url(../img/top-bg.jpg);

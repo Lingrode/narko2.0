@@ -77,8 +77,3 @@ const swiper = new Swiper(".swiper", {
     delay: 5000,
   },
 });
-
-let elem = document.querySelector('.benefits__inner-pic');
-
-e.addEventListener('click', () => {
-})
