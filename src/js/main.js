@@ -64,8 +64,8 @@ function accordion() {
 }
 accordion();
 
-// Swiper
-const swiper = new Swiper(".top.swiper", {
+Swiper
+const swiperTop = new Swiper(".top.swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -75,7 +75,38 @@ const swiper = new Swiper(".top.swiper", {
   autoplay: {
     enabled: true,
     delay: 5000,
+  }
+});
+
+const swiperCertificates = new Swiper('.certificates__inner', {
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next'
   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  slidesPerView: 4,
+  spaceBetween: 24,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      centeredSlides: true,
+    },
+    768: {
+      slidesPerView: 2,
+      centeredSlides: true,
+    },
+    992: {
+      slidesPerView: 3,
+      centeredSlides: false,
+    },
+    1450: {
+      slidesPerView: 4,
+      spaceBetween: 24
+    },
+  }
 });
 
 // let elem = document.querySelector('.benefits__inner-pic');

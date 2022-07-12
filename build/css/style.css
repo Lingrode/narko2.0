@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+.certificates__title,
 .about__info-title,
 .benefits__title,
 .top__title {
@@ -1047,6 +1048,101 @@ body.locked {
   color: #162629;
 }
 
+.certificates {
+  padding: 180px 0 170px;
+  background-color: #f9fafb;
+  overflow: hidden;
+}
+
+.certificates__title {
+  margin-bottom: 52px;
+}
+
+.certificates .swiper {
+  height: 570px;
+  overflow: visible;
+}
+
+.certificates .swiper-button-next,
+.certificates .swiper-button-prev {
+  top: unset;
+  bottom: 0;
+}
+
+.certificates .box {
+  position: relative;
+  left: 1337px;
+  top: 10px;
+}
+
+.certificates .box::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: -39px;
+  width: 1px;
+  height: 32px;
+  background-color: #d0d3d4;
+}
+
+.certificates .swiper-button-next {
+  left: 0;
+}
+
+.certificates .swiper-button-next::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/icons/arrow-right-line.svg");
+}
+
+.certificates .swiper-button-prev {
+  left: -80px;
+}
+
+.certificates .swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/icons/arrow-left-line.svg");
+}
+
+.certificates .swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.certificates .swiper-pagination-bullet {
+  margin: 0 !important;
+  border-radius: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+}
+
+.certificates .swiper-pagination-bullet:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.certificates .swiper-pagination-bullet:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.certificates .swiper-pagination-bullet-active {
+  background-color: #56bb90;
+  height: 8px;
+  border-radius: 3px;
+}
+
 /**
  * Swiper 7.3.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1960,6 +2056,14 @@ button.swiper-pagination-bullet {
   .benefits__box {
     margin-bottom: 50px;
   }
+
+  .certificates .box {
+    left: 950px;
+  }
+
+  .certificates .swiper-pagination {
+    max-width: 850px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -2232,6 +2336,18 @@ button.swiper-pagination-bullet {
   .about__info-title {
     font-size: 50px;
   }
+
+  .certificates__title {
+    font-size: 50px;
+  }
+
+  .certificates .box {
+    display: none;
+  }
+
+  .certificates .swiper-pagination {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -2367,6 +2483,10 @@ button.swiper-pagination-bullet {
   .accordion .dropdown-menu__list-link span {
     font-size: 14px;
   }
+
+  .certificates {
+    padding: 90px 0 70px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -2456,6 +2576,10 @@ button.swiper-pagination-bullet {
   .about__video-descr {
     font-size: 12px;
     text-align: center;
+  }
+
+  .certificates__title {
+    font-size: 36px;
   }
 }
 
