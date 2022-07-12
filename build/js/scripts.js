@@ -80,7 +80,7 @@ function accordion() {
 accordion();
 
 // Swiper
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".top.swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -93,7 +93,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-let elem = document.querySelector('.benefits__inner-pic');
+// let elem = document.querySelector('.benefits__inner-pic');
 
-e.addEventListener('click', () => {
-})
+// e.addEventListener('click', () => {
+// })
