@@ -1,9 +1,24 @@
 .benefits {
   padding: 135px 0 154px;
 
+  @media (max-width: $breakpoint1450) {
+    padding: 100px 0 130px;
+  }
+  @media (max-width: $breakpoint480) {
+    padding: 70px 0 100px;
+  }
+
   &__title {
     @extend %title-h1;
     margin-bottom: 80px;
+
+    @media (max-width: $breakpoint1450) {
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+    @media (max-width: $breakpoint480) {
+      font-size: 36px;
+    }
   }
 
   &__inner {
@@ -11,12 +26,36 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: $breakpoint1450) {
+      flex-direction: column;
+    }
+
+    &-img {
+      @media (max-width: $breakpoint992) {
+        max-width: 450px;
+      }
+      @media (max-width: $breakpoint480) {
+        max-width: 350px;
+      }
+    }
+
     &-wrapper {
       display: flex;
       align-items: center;
       margin-bottom: 48px;
       &:last-child {
         margin-bottom: 0;
+      }
+
+      svg {
+        @media (max-width: $breakpoint480) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      @media (max-width: $breakpoint480) {
+        margin-bottom: 30px;
       }
     }
 
@@ -27,6 +66,29 @@
       span {
         font-size: 16px;
         display: block;
+        @media (max-width: 700px) {
+          max-width: 300px;
+          line-height: 120%;
+        }
+        @media (max-width: $breakpoint480) {
+          max-width: 250px;
+          font-size: 14px;
+        }
+        @media (max-width: 350px) {
+          max-width: 200px;
+        }
+      }
+
+      @media (max-width: $breakpoint992) {
+        font-size: 22px;
+      }
+      @media (max-width: $breakpoint480) {
+        font-size: 18px;
+        margin-left: 15px;
+      }
+      @media (max-width: 350px) {
+        font-size: 16px;
+        margin-left: 12px;
       }
     }
 
@@ -46,12 +108,37 @@
         background-position: center center;
         border-radius: 14px;
         animation: anim 1.5s infinite;
+
+        @media (max-width: $breakpoint1450) {
+          right: 245px;
+        }
+        @media (max-width: $breakpoint992) {
+          right: 185px;
+          bottom: 35px;
+          background-size: 90px;
+          width: 100px;
+          height: 100px;
+        }
+        @media (max-width: $breakpoint480) {
+          right: 125px;
+          bottom: 30px;
+          background-size: 80px;
+          width: 90px;
+          height: 90px;
+        }
       }
     }
   }
 
   &__box {
     position: relative;
+
+    @media (max-width: $breakpoint1450) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: $breakpoint480) {
+      margin-bottom: 30px;
+    }
   }
 }
 

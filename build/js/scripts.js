@@ -80,7 +80,7 @@ function accordion() {
 accordion();
 
 // Swiper
-const swiper = new Swiper(".swiper", {
+const swiperTop = new Swiper(".top.swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -91,4 +91,16 @@ const swiper = new Swiper(".swiper", {
     enabled: true,
     delay: 5000,
   },
+});
+
+const swiperStaff = new Swiper(".staff-swiper", {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  speed: 0,
+  slidesPerView: 4,
+  // allowTouchMove: false,
+  // simulateTouch: false,
 });
