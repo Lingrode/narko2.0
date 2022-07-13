@@ -80,6 +80,7 @@ function accordion() {
 accordion();
 
 // Swiper
+
 const swiperTop = new Swiper(".top.swiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -93,6 +94,37 @@ const swiperTop = new Swiper(".top.swiper", {
   },
 });
 
+const swiperCertificates = new Swiper(".certificates__inner", {
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  slidesPerView: 4,
+  spaceBetween: 24,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      centeredSlides: true,
+    },
+    768: {
+      slidesPerView: 2,
+      centeredSlides: true,
+    },
+    992: {
+      slidesPerView: 3,
+      centeredSlides: false,
+    },
+    1450: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+  },
+});
+
 const swiperStaff = new Swiper(".staff-swiper", {
   loop: true,
   navigation: {
@@ -101,6 +133,32 @@ const swiperStaff = new Swiper(".staff-swiper", {
   },
   speed: 0,
   slidesPerView: 4,
-  // allowTouchMove: false,
-  // simulateTouch: false,
+  allowTouchMove: false,
 });
+
+function bred() {
+  function fast() {
+    const items = document.querySelectorAll(".staff__info");
+    items.forEach((item) => {
+      const parent = item.parentNode;
+      if (parent.classList.contains("swiper-slide-active")) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+  fast();
+  const next = document.querySelectorAll(".swiper-button-next");
+  const prev = document.querySelectorAll(".swiper-button-prev");
+  for (let i = 0; i < next.length; i++) {
+    next[i].addEventListener("click", () => {
+      fast();
+    });
+    prev[i].addEventListener("click", () => {
+      fast();
+    });
+  }
+}
+bred();
+

@@ -1,0 +1,115 @@
+.certificates {
+  padding: 180px 0 170px;
+  background-color: #f9fafb;
+  overflow: hidden;
+
+  @media (max-width: $breakpoint768) {
+    padding: 90px 0 70px;
+  }
+
+  &__title {
+    @extend %title-h1;
+    margin-bottom: 52px;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 50px;
+    }
+
+    @media (max-width: $breakpoint480) {
+      font-size: 36px;
+    }
+  }
+
+  .swiper {
+    height: 570px;
+    overflow: visible;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: unset;
+    bottom: 0;
+  }
+
+  .box {
+    position: relative;
+    left: 1337px;
+    top: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: -39px;
+      width: 1px;
+      height: 32px;
+      background-color: #d0d3d4;
+    }
+
+    @media (max-width: $breakpoint1450) {
+      left: 950px;
+    }
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+
+  .swiper-button-next {
+    left: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      background-image: url("../img/icons/arrow-right-line.svg");
+    }
+  }
+
+  .swiper-button-prev {
+    left: -80px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      background-image: url("../img/icons/arrow-left-line.svg");
+    }
+  }
+
+  .swiper-pagination {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+
+    @media (max-width: $breakpoint1450) {
+      max-width: 850px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      max-width: 100%;
+    }
+
+    &-bullet {
+      margin: 0 !important;
+      border-radius: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+
+      &:first-child {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+      }
+
+      &-active {
+        background-color: $color-green;
+        height: 8px;
+        border-radius: 3px;
+      }
+    }
+  }
+}

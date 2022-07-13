@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+.certificates__title,
 .about__info-title,
 .benefits__title,
 .top__title {
@@ -1139,7 +1140,103 @@ body.locked {
   color: #ffffff;
 }
 
+.certificates {
+  padding: 180px 0 170px;
+  background-color: #f9fafb;
+  overflow: hidden;
+}
+
+.certificates__title {
+  margin-bottom: 52px;
+}
+
+.certificates .swiper {
+  height: 570px;
+  overflow: visible;
+}
+
+.certificates .swiper-button-next,
+.certificates .swiper-button-prev {
+  top: unset;
+  bottom: 0;
+}
+
+.certificates .box {
+  position: relative;
+  left: 1337px;
+  top: 10px;
+}
+
+.certificates .box::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: -39px;
+  width: 1px;
+  height: 32px;
+  background-color: #d0d3d4;
+}
+
+.certificates .swiper-button-next {
+  left: 0;
+}
+
+.certificates .swiper-button-next::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/icons/arrow-right-line.svg");
+}
+
+.certificates .swiper-button-prev {
+  left: -80px;
+}
+
+.certificates .swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/icons/arrow-left-line.svg");
+}
+
+.certificates .swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.certificates .swiper-pagination-bullet {
+  margin: 0 !important;
+  border-radius: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+}
+
+.certificates .swiper-pagination-bullet:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.certificates .swiper-pagination-bullet:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.certificates .swiper-pagination-bullet-active {
+  background-color: #56bb90;
+  height: 8px;
+  border-radius: 3px;
+}
+
 .staff__wrapper .swiper {
+  position: relative;
   height: 700px;
 }
 
@@ -1172,10 +1269,6 @@ body.locked {
   left: 150px;
 }
 
-.staff__wrapper .fake {
-  width: 0 !important;
-}
-
 .staff__wrapper .swiper-slide-active {
   width: 700px !important;
   position: relative;
@@ -1206,6 +1299,155 @@ body.locked {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.staff__wrapper .staff__title {
+  position: relative;
+  bottom: -100px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 120%;
+  color: #162629;
+}
+
+.staff__wrapper .staff__btn {
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  top: -100px;
+  width: 198px;
+  height: 56px;
+  background: #56bb90;
+  border-radius: 12px;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.staff__wrapper .staff__btn a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+}
+
+.staff__wrapper .staff__btn:hover {
+  opacity: 0.8;
+}
+
+.staff__wrapper .box {
+  position: absolute;
+  right: 300px;
+  top: 70px;
+}
+
+.staff__wrapper .box::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: -20px;
+  width: 1px;
+  height: 32px;
+  background-color: #d0d3d4;
+}
+
+.staff__wrapper .swiper-button-next {
+  left: 0;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.staff__wrapper .swiper-button-next::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/icons/arrow-right-line.svg");
+}
+
+.staff__wrapper .swiper-button-next:hover {
+  opacity: 0.7;
+}
+
+.staff__wrapper .swiper-button-prev {
+  left: -80px;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.staff__wrapper .swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/icons/arrow-left-line.svg");
+}
+
+.staff__wrapper .swiper-button-prev:hover {
+  opacity: 0.7;
+}
+
+.staff__wrapper .staff__info {
+  width: 439px;
+  text-align: start;
+  position: absolute;
+  bottom: 20px;
+  left: 350px;
+  padding: 48px;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 0px 9px 50px -12px rgba(86, 187, 144, 0.15);
+          box-shadow: 0px 9px 50px -12px rgba(86, 187, 144, 0.15);
+  border-radius: 24px;
+}
+
+.staff__wrapper .staff__info-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #162629;
+  padding-bottom: 4px;
+}
+
+.staff__wrapper .staff__info-descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4b5355;
+  padding-bottom: 16px;
+}
+
+.staff__wrapper .staff__info-descr-year {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+.staff__wrapper .staff__info-descr-year span:last-child {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #162629;
+}
+
+.staff__wrapper .staff__info-btn {
+  position: static;
+  width: 169px;
+  height: 56px;
+  left: 48px;
+  top: 170px;
+  background: #eef8f4;
+}
+
+.staff__wrapper .staff__info-btn a {
+  color: #56bb90;
 }
 
 /**
@@ -2133,6 +2375,14 @@ button.swiper-pagination-bullet {
   .requestShort .form__input-item {
     width: 340px;
   }
+
+  .certificates .box {
+    left: 950px;
+  }
+
+  .certificates .swiper-pagination {
+    max-width: 850px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -2421,6 +2671,18 @@ button.swiper-pagination-bullet {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
+  .certificates__title {
+    font-size: 50px;
+  }
+
+  .certificates .box {
+    display: none;
+  }
+
+  .certificates .swiper-pagination {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -2556,6 +2818,10 @@ button.swiper-pagination-bullet {
   .accordion .dropdown-menu__list-link span {
     font-size: 14px;
   }
+
+  .certificates {
+    padding: 90px 0 70px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -2666,6 +2932,10 @@ button.swiper-pagination-bullet {
   .requestShort .form__input-sent {
     width: 50vw;
     margin-top: 16px;
+  }
+
+  .certificates__title {
+    font-size: 36px;
   }
 }
 
