@@ -65,7 +65,6 @@ function accordion() {
 accordion();
 
 // Swiper
-
 const swiperTop = new Swiper(".top.swiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -116,33 +115,45 @@ const swiperStaff = new Swiper(".staff-swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  speed: 0,
-  slidesPerView: 4,
+  speed: 1000,
+  slidesPerView: 1,
   allowTouchMove: false,
+  breakpoints: {
+    720: {
+      slidesPerView: 4,
+      speed: 0,
+    },
+  },
 });
 
-function bred() {
-  function fast() {
-    const items = document.querySelectorAll(".staff__info");
-    items.forEach((item) => {
-      const parent = item.parentNode;
-      if (parent.classList.contains("swiper-slide-active")) {
-        item.style.display = "block";
+// Staff
+function staffInfo() {
+  const staffInfo = document.querySelectorAll(".staff__info");
+  const nextSraff = document.querySelectorAll(".staff .swiper-button-next");
+  const prevSraff = document.querySelectorAll(".staff .swiper-button-prev");
+  function updateStaffInfo() {
+    staffInfo.forEach((item) => {
+      item.parentNode.classList.contains("swiper-slide-active")
+        ? (item.style.visability = "visiable")
+        : (item.style.visability = "hidden");
+    });
+  }
+  updateStaffInfo();
+  for (let i = 0; i < nextSraff.length; i++) {
+    nextSraff[i].addEventListener("click", updateStaffInfo);
+    prevSraff[i].addEventListener("click", updateStaffInfo);
+    function updateStaff720() {
+      if (window.innerWidth < 721) {
+        nextSraff[0].parentNode.style.display = "none";
+        nextSraff[1].parentNode.style.display = "block";
       } else {
-        item.style.display = "none";
+        nextSraff[0].parentNode.style.display = "block";
+        nextSraff[1].parentNode.style.display = "none";
       }
-    });
+    }
+    updateStaff720();
   }
-  fast();
-  const next = document.querySelectorAll(".swiper-button-next");
-  const prev = document.querySelectorAll(".swiper-button-prev");
-  for (let i = 0; i < next.length; i++) {
-    next[i].addEventListener("click", () => {
-      fast();
-    });
-    prev[i].addEventListener("click", () => {
-      fast();
-    });
-  }
+  window.addEventListener("resize", updateStaff720);
+  window.addEventListener("resize", updateStaffInfo);
 }
-bred();
+staffInfo();

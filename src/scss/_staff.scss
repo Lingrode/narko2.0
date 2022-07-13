@@ -1,4 +1,4 @@
-.staff__wrapper {
+.staff {
   .swiper {
     position: relative;
     height: 700px;
@@ -10,8 +10,62 @@
     text-align: center;
     position: relative;
     left: 125px;
+    .staff__info {
+      opacity: 0;
+      @media (max-width: 720px) {
+        transition: 1s all;
+      }
+    }
+    @media (max-width: 720px) {
+      justify-content: center;
+      left: 0;
+    }
     img {
       width: 255px !important;
+      @media (max-width: 1250px) {
+        width: 220px !important;
+      }
+      @media (max-width: 720px) {
+        transition: 1s all;
+      }
+    }
+  }
+  .staff__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: -100px;
+    @media (max-width: 720px) {
+      justify-content: center;
+    }
+    @media (max-width: $breakpoint480) {
+      bottom: -150px;
+    }
+  }
+  .box {
+    position: relative;
+    display: block;
+    padding-right: 140px;
+    @media (max-width: 1050px) {
+      padding-right: 100px;
+    }
+    @media (max-width: $breakpoint992) {
+      padding-right: 50px;
+    }
+    @media (max-width: 720px) {
+      left: 0;
+      padding-right: 0;
+      margin-left: 53px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: -17px;
+      width: 1px;
+      height: 32px;
+      background-color: #d0d3d4;
     }
   }
   .swiper-slide-prev {
@@ -21,13 +75,60 @@
   .swiper-slide-next {
     position: relative;
     left: 150px;
+
+    @media (max-width: $breakpoint1450) {
+      left: 100px;
+    }
+    @media (max-width: 1250px) {
+      left: 50px;
+    }
   }
   .swiper-slide-active {
     width: 700px !important;
     position: relative;
     left: 125px;
+    .staff__info {
+      opacity: 1;
+      @media (max-width: 720px) {
+        transition: 0.7s all;
+      }
+    }
+
+    @media (max-width: $breakpoint1450) {
+      left: 50px;
+    }
+    @media (max-width: 1250px) {
+      left: -50px;
+    }
+    @media (max-width: 800px) {
+      left: -200px;
+    }
+    @media (max-width: 720px) {
+      left: 0;
+      width: inherit !important;
+    }
     img {
       width: 700px !important;
+      @media (max-width: $breakpoint1450) {
+        width: 600px !important;
+      }
+      @media (max-width: 1250px) {
+        width: 500px !important;
+      }
+      @media (max-width: 800px) {
+        width: 400px !important;
+      }
+      @media (max-width: 720px) {
+        display: flex;
+        justify-content: center;
+        transition: 1s all;
+      }
+      @media (max-width: $breakpoint480) {
+        width: 300px !important;
+      }
+      @media (max-width: 360px) {
+        width: 260px !important;
+      }
     }
   }
   .swiper-line {
@@ -49,45 +150,48 @@
     }
   }
   .staff__title {
-    position: relative;
-    bottom: -100px;
     font-weight: 700;
     font-size: 64px;
     line-height: 120%;
     color: #162629;
+    @media (max-width: $breakpoint992) {
+      font-size: 50px;
+    }
+    @media (max-width: $breakpoint480) {
+      font-size: 42px;
+    }
+  }
+  .staff__end {
+    position: relative;
+    top: -100px;
+    @media (max-width: 720px) {
+      top: -70px;
+      // padding-left: 55px;
+      gap: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
   .staff__btn {
     cursor: pointer;
     z-index: 10;
     position: relative;
-    top: -100px;
     width: 198px;
     height: 56px;
     background: #56bb90;
     border-radius: 12px;
     transition: 0.2s all;
-    a {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    @media (max-width: $breakpoint480) {
+      height: 50px;
     }
     &:hover {
       opacity: 0.8;
-    }
-  }
-  .box {
-    position: absolute;
-    right: 300px;
-    top: 70px;
-    &::before {
-      content: "";
-      position: absolute;
-      left: -28px;
-      top: -20px;
-      width: 1px;
-      height: 32px;
-      background-color: #d0d3d4;
     }
   }
   .swiper-button-next {
@@ -133,6 +237,32 @@
       background: rgba(255, 255, 255, 0.95);
       box-shadow: 0px 9px 50px -12px rgba(86, 187, 144, 0.15);
       border-radius: 24px;
+      @media (max-width: 1250px) {
+        width: 400px;
+        padding: 32px;
+        left: 400px;
+        bottom: 70px;
+      }
+      @media (max-width: 800px) {
+        width: 350px;
+        padding: 24px;
+        left: 500px;
+        bottom: 100px;
+      }
+      @media (max-width: 720px) {
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 120px;
+        transition: 1s all;
+      }
+      @media (max-width: $breakpoint480) {
+        width: 300px;
+        padding: 16px 24px;
+      }
+      @media (max-width: 360px) {
+        width: 290px;
+        padding: 16px 20px;
+      }
     }
     // .staff__info-title
     &__info-title {
@@ -141,6 +271,9 @@
       line-height: 30px;
       color: #162629;
       padding-bottom: 4px;
+      @media (max-width: $breakpoint480) {
+        font-size: 18px;
+      }
     }
     // .staff__info-descr
     &__info-descr {
@@ -149,6 +282,12 @@
       line-height: 24px;
       color: #4b5355;
       padding-bottom: 16px;
+      @media (max-width: 800px) {
+        padding-bottom: 8px;
+      }
+      @media (max-width: $breakpoint480) {
+        font-size: 14px;
+      }
     }
     // .staff__info-descr-year
     &__info-descr-year {
@@ -156,6 +295,9 @@
       flex-direction: row;
       gap: 12px;
       padding-bottom: 24px;
+      @media (max-width: 800px) {
+        padding-bottom: 12px;
+      }
       span:last-child {
         font-weight: 500;
         font-size: 16px;
@@ -168,11 +310,10 @@
       position: static;
       width: 169px;
       height: 56px;
-      left: 48px;
-      top: 170px;
       background: #eef8f4;
-      a {
-        color: #56bb90;
+      color: #56bb90;
+      @media (max-width: $breakpoint480) {
+        height: 48px;
       }
     }
   }
