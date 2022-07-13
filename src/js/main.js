@@ -110,11 +110,11 @@ const swiperCertificates = new Swiper(".certificates__inner", {
 });
 
 const swiperStaff = new Swiper(".staff-swiper", {
-  loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next-staff",
+    prevEl: ".swiper-button-prev-staff",
   },
+  loop: true,
   speed: 1000,
   slidesPerView: 1,
   allowTouchMove: false,
@@ -127,7 +127,7 @@ const swiperStaff = new Swiper(".staff-swiper", {
 });
 
 // Staff
-function staffInfo() {
+function staff() {
   const staffInfo = document.querySelectorAll(".staff__info");
   const nextSraff = document.querySelectorAll(".staff .swiper-button-next");
   const prevSraff = document.querySelectorAll(".staff .swiper-button-prev");
@@ -156,4 +156,4 @@ function staffInfo() {
   window.addEventListener("resize", updateStaff720);
   window.addEventListener("resize", updateStaffInfo);
 }
-staffInfo();
+staff();
