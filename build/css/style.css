@@ -10,6 +10,14 @@
   color: #162629;
 }
 
+.request__form-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  color: #162629;
+}
+
+.request__form-text,
 .top__btn,
 .accordion .dropdown-menu__list-link,
 .header-nav__list-link,
@@ -1217,17 +1225,20 @@ body.locked {
   width: 100%;
   height: 6px;
   background-color: #fff;
-  border: 1px solid #56bb90;
+  border-top: 1px solid #56bb90;
+  border-bottom: 1px solid #56bb90;
 }
 
 .certificates .swiper-pagination-bullet:first-child {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
+  border-left: 1px solid #56bb90;
 }
 
 .certificates .swiper-pagination-bullet:last-child {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
+  border-right: 1px solid #56bb90;
 }
 
 .certificates .swiper-pagination-bullet-active {
@@ -1465,6 +1476,164 @@ body.locked {
   height: 56px;
   background: #eef8f4;
   color: #56bb90;
+}
+
+.request {
+  padding-bottom: 180px;
+}
+
+.request__inner {
+  border-radius: 24px;
+  background-color: #e2f0eb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.request__form {
+  margin-left: 100px;
+}
+
+.request__form-title {
+  margin-bottom: 12px;
+}
+
+.request__form-text {
+  margin-bottom: 40px;
+}
+
+.request__form-box {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 56px);
+}
+
+.request__form-label {
+  position: relative;
+}
+
+.request__form-label::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+.request__form-label.help::after {
+  background-image: url("../img/icons/help.svg");
+}
+
+.request__form-label.name::after {
+  background-image: url("../img/firstName-icon.svg");
+}
+
+.request__form-label.tel::after {
+  background-image: url("../img/icons/phone-fill.svg");
+}
+
+.request__form-label.place::after {
+  background-image: url("../img/icons/map-pin-fill.svg");
+}
+
+.request__form-label.textarea {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.request__form-label.textarea::after {
+  background-image: url("../img/icons/psychotherapy-fill.svg");
+}
+
+.request__form-input {
+  width: 380px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #162629;
+  padding: 16px 20px 16px 52px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.request__form-input::-webkit-input-placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-input::-moz-placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-input:-ms-input-placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-input::-ms-input-placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-input::placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-textarea {
+  width: 380px;
+  height: 128px;
+  font-weight: 400;
+  color: #162629;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 12px;
+  resize: none;
+  padding: 16px 20px 16px 52px;
+}
+
+.request__form-textarea::-webkit-input-placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-textarea::-moz-placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-textarea:-ms-input-placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-textarea::-ms-input-placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-textarea::placeholder {
+  color: #a2a8a9;
+}
+
+.request__form-btn {
+  cursor: pointer;
+  width: 165px;
+  height: 56px;
+  border-radius: 12px;
+  background: #56bb90;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 28px;
+}
+
+.request__img {
+  margin-top: -20px;
+  max-width: 391px;
+  width: 100%;
+  position: relative;
 }
 
 footer {
@@ -2554,6 +2723,22 @@ button.swiper-pagination-bullet {
     width: 600px !important;
   }
 
+  .request__form {
+    margin-left: 60px;
+  }
+
+  .request__form-input {
+    width: 300px;
+  }
+
+  .request__form-textarea {
+    width: 300px;
+  }
+
+  .request__img {
+    max-width: 300px;
+  }
+
   footer .footer__right,
   footer .footer__left {
     gap: 150px;
@@ -2917,6 +3102,33 @@ button.swiper-pagination-bullet {
     font-size: 50px;
   }
 
+  .request {
+    padding-bottom: 80px;
+  }
+
+  .request__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .request__form {
+    padding: 70px 0 80px;
+    margin-left: 0;
+  }
+
+  .request__form-input {
+    width: 320px;
+  }
+
+  .request__form-textarea {
+    width: 320px;
+  }
+
+  .request__img {
+    display: none;
+  }
+
   footer .footer {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3111,6 +3323,70 @@ button.swiper-pagination-bullet {
 
   .certificates .swiper {
     height: 470px;
+  }
+
+  .request__form-title {
+    text-align: center;
+  }
+
+  .request__form-text {
+    text-align: center;
+  }
+
+  .request__form-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .request__form-label.help {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .request__form-label.name {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .request__form-label.tel {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .request__form-label.place {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+
+  .request__form-label.textarea {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+
+  .request__form-input {
+    width: 100%;
+  }
+
+  .request__form-textarea {
+    width: 100%;
+  }
+
+  .request__form-btn {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -3397,6 +3673,22 @@ button.swiper-pagination-bullet {
 
   .staff .staff__info-btn {
     height: 48px;
+  }
+
+  .request__form {
+    padding: 40px 15px 50px;
+  }
+
+  .request__form-title {
+    font-size: 36px;
+  }
+
+  .request__form-text {
+    margin-bottom: 20px;
+  }
+
+  .request__form-btn {
+    height: 50px;
   }
 }
 

@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no">
-    <title>Наркоклиника</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.min.css" />
-  </head>
 
-  <body class="main__body">
-    <!-- Header -->
-    <header class="header">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <title>Наркоклиника</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.min.css" />
+</head>
+
+<body class="main__body">
+  <!-- Header -->
+  <header class="header">
   <div class="container">
     <div class="header__inner">
       <a href="#"><img class="header__logo" src="img/logo.png" alt="logo" /></a>
@@ -2527,9 +2525,9 @@
   </div>
 </header>
 
-    <!-- Main Page -->
-    <main>
-      <section class="top swiper">
+  <!-- Main Page -->
+  <main>
+    <section class="top swiper">
   <div class="swiper-wrapper">
     <div class="top__block swiper-slide">
       <div class="container-inner">
@@ -2600,8 +2598,8 @@
   </div>
   <div class="swiper-pagination"></div>
 </section>
- 
-      <section class="benefits">
+
+    <section class="benefits">
   <div class="container">
     <h2 class="benefits__title">Преимущества</h2>
     <div class="benefits__inner">
@@ -2706,7 +2704,7 @@
     </div>
   </div>
 </section>
-      <section class="about-wrapper">
+    <section class="about-wrapper">
   <div class="container">
     <div class="about">
       <div class="about__info">
@@ -2731,8 +2729,8 @@
     </div>
   </div>
 </section>
- 
-      <section class="requestShort">
+
+    <section class="requestShort">
   <div class="container">
     <div class="form">
       <div class="form__text">
@@ -2768,7 +2766,7 @@
   </div>
 </section>
 
-      <section class="certificates">
+    <section class="certificates">
   <div class="container">
     <h1 class="certificates__title">
       Сертификаты
@@ -2817,7 +2815,7 @@
     </div>
   </div>
 </section>
-      <section class="staff">
+    <section class="staff">
   <div class="container">
     <div class="staff__top">
       <h2 class="staff__title">Персонал</h2>
@@ -2886,9 +2884,40 @@
   </div>
 </section>
 
-    </main>
-    <!-- Footer -->
-    <footer>
+    <section class="request">
+  <div class="container">
+    <div class="request__inner">
+      <form class="request__form">
+        <h2 class="request__form-title">Оставьте заявку</h2>
+        <p class="request__form-text">И наш специалист свяжется с вами</p>
+        <div class="request__form-box">
+          <label class="request__form-label help" for="help">
+            <input class="request__form-input" type="text" name="help" placeholder="Кому нужна помощь">
+          </label>
+          <label class="request__form-label textarea" for="textarea">
+            <textarea class="request__form-textarea" name="textarea" placeholder="От чего лечить"></textarea>
+          </label>
+          <label class="request__form-label name" for="firstName">
+            <input class="request__form-input" type="text" name="firstName" placeholder="Ваше имя">
+          </label>
+          <label class="request__form-label tel" for="tel">
+            <input class="request__form-input" type="number" name="tel" placeholder="Номер телефона">
+          </label>
+          <label class="request__form-label place" for="place">
+            <input class="request__form-input" type="text" name="place" placeholder="Где забирать">
+          </label>
+          <button class="request__form-btn" type="submit">
+            Отправить
+          </button>
+        </div>
+      </form>
+      <img class="request__img" src="img/request-img.png" alt="request image">
+    </div>
+  </div>
+</section>
+  </main>
+  <!-- Footer -->
+  <footer>
   <div class="container">
     <div class="footer">
       <div class="footer__left">
@@ -2974,6 +3003,7 @@
     </div>
   </div>
 </footer>
-  </body>
-  <script src="./js/scripts.min.js"></script>
+</body>
+<script src="./js/scripts.min.js"></script>
+
 </html>
