@@ -1,0 +1,94 @@
+.textInfo {
+  padding: 150px 0;
+  @media (max-width: $breakpoint768) {
+    padding: 75px 0;
+  }
+
+  // .textInfo__wrapper
+  &__wrapper {
+    background-color: #f9fafb;
+  }
+  // .textInfo__title
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    color: #162629;
+    padding-bottom: 32px;
+    @media (max-width: $breakpoint992) {
+      font-size: 50px;
+    }
+    @media (max-width: 666px) {
+      font-size: 36px;
+      padding-bottom: 28px;
+    }
+    @media (max-width: $breakpoint480) {
+      font-size: 32px;
+      padding-bottom: 20px;
+    }
+  }
+  // .textInfo__info
+  &__info {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4b5355;
+    transition: 0.2s all;
+    @media (max-width: $breakpoint480) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &__info-gradient:after {
+    transition: 0.3s all;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(249, 250, 251, 0) 0, #f9fafb 100%);
+  }
+
+  // .textInfo__info-text
+  &__info-text {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+  &__info-text-open {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+  }
+  &__info-text + &__info-text {
+    padding-top: 8px;
+  }
+  // .textInfo__btn
+  &__btn {
+    padding-top: 14px;
+    button {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      background-color: inherit;
+      transition: 0.2s all;
+      @media (max-width: $breakpoint480) {
+        font-size: 14px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  // .textInfo__btn-open
+  &__btn-open {
+    color: #56bb90;
+  }
+  // .textInfo__btn-close
+  &__btn-close {
+    color: #a2a8a9;
+  }
+}

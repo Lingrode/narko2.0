@@ -106,24 +106,24 @@ const swiperCertificates = new Swiper(".certificates__inner", {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      centeredSlides: true
+      centeredSlides: true,
     },
     576: {
       slidesPerView: 2,
-      spaceBetween: 24
+      // spaceBetween: 24,
     },
     768: {
       slidesPerView: 2,
-      centeredSlides: true
+      centeredSlides: true,
     },
     992: {
       slidesPerView: 3,
       centeredSlides: false,
-      spaceBetween: 24
+      // spaceBetween: 24,
     },
     1450: {
       slidesPerView: 4,
-      spaceBetween: 24
+      // spaceBetween: 24,
     },
   },
 });
@@ -147,20 +147,8 @@ const swiperStaff = new Swiper(".staff-swiper", {
 
 // Staff
 function staff() {
-  const staffInfo = document.querySelectorAll(".staff__info");
   const nextSraff = document.querySelectorAll(".staff .swiper-button-next");
-  const prevSraff = document.querySelectorAll(".staff .swiper-button-prev");
-  function updateStaffInfo() {
-    staffInfo.forEach((item) => {
-      item.parentNode.classList.contains("swiper-slide-active")
-        ? (item.style.visability = "visiable")
-        : (item.style.visability = "hidden");
-    });
-  }
-  updateStaffInfo();
   for (let i = 0; i < nextSraff.length; i++) {
-    nextSraff[i].addEventListener("click", updateStaffInfo);
-    prevSraff[i].addEventListener("click", updateStaffInfo);
     function updateStaff720() {
       if (window.innerWidth < 721) {
         nextSraff[0].parentNode.style.display = "none";
@@ -173,7 +161,58 @@ function staff() {
     updateStaff720();
   }
   window.addEventListener("resize", updateStaff720);
-  window.addEventListener("resize", updateStaffInfo);
 }
 staff();
+
+// textInfo
+function textInfo() {
+  const text = document.querySelectorAll(".textInfo__info-text");
+  const btnOpen = document.querySelector(".textInfo__btn-open");
+  const btnClose = document.querySelector(".textInfo__btn-close");
+  let parentHeight = 0;
+  for (let i = 0; i < text.length; i++) {
+    text[0].classList.add("textInfo__info-text-open");
+    text[i].setAttribute("text-id", i);
+
+    parentHeight = parentHeight + text[i].clientHeight;
+    window.addEventListener("resize", () => {
+      parentHeight = 0;
+      for (let i = 0; i < text.length; i++) {
+        parentHeight = parentHeight + text[i].clientHeight;
+      }
+      if (text[i + 1].classList.contains("textInfo__info-text-open")) {
+        open();
+      } else {
+        close();
+      }
+      console.log(parentHeight);
+    });
+    function open() {
+      btnOpen.style.display = "none";
+      btnClose.style.display = "block";
+      for (let i = 0; i < text.length; i++) {
+        if (text[i].getAttribute("text-id") > 0) {
+          text[i].classList.add("textInfo__info-text-open");
+          text[i].parentNode.classList.remove("textInfo__info-gradient");
+          text[i].parentNode.style.height = parentHeight + "px";
+        }
+      }
+    }
+    function close() {
+      btnOpen.style.display = "block";
+      btnClose.style.display = "none";
+      for (let i = 0; i < text.length; i++) {
+        if (text[i].getAttribute("text-id") > 0) {
+          text[i].classList.remove("textInfo__info-text-open");
+          text[i].parentNode.classList.add("textInfo__info-gradient");
+          text[i].parentNode.style.height = text[0].clientHeight + "px";
+        }
+      }
+    }
+    close();
+  }
+  btnOpen.addEventListener("click", open);
+  btnClose.addEventListener("click", close);
+}
+textInfo();
 

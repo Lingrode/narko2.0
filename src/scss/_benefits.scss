@@ -31,6 +31,7 @@
     }
 
     &-img {
+      width: 100%;
       @media (max-width: $breakpoint992) {
         max-width: 450px;
       }
@@ -100,7 +101,7 @@
         content: "";
         position: absolute;
         bottom: 70px;
-        right: -45px;
+        right: 15px;
         width: 120px;
         height: 120px;
         background-image: url("../img/icons/arrow-down1.svg");
@@ -110,18 +111,17 @@
         animation: anim 1.5s infinite;
 
         @media (max-width: $breakpoint1450) {
-          right: 245px;
+          right: 50%;
+          bottom: 30px;
         }
         @media (max-width: $breakpoint992) {
-          right: 185px;
-          bottom: 35px;
+          right: 50%;
           background-size: 90px;
           width: 100px;
           height: 100px;
         }
         @media (max-width: $breakpoint480) {
-          right: 125px;
-          bottom: 30px;
+          right: 50%;
           background-size: 80px;
           width: 90px;
           height: 90px;
@@ -144,14 +144,14 @@
 
 @keyframes anim {
   0% {
-    transform: translateY(0%);
+    transform: translateY(0%) translateX(50%);
   }
 
   50% {
-    transform: translateY(20px);
+    transform: translateY(20px) translateX(50%);
   }
 
   100% {
-    transform: translateY(0%);
+    transform: translateY(0%) translateX(50%);
   }
 }
