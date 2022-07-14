@@ -1,0 +1,225 @@
+.request {
+  padding-bottom: 180px;
+
+  @media (max-width: $breakpoint992) {
+    padding-bottom: 80px;
+  }
+
+  &__inner {
+    border-radius: 24px;
+    background-color: #e2f0eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint992) {
+      justify-content: center;
+    }
+  }
+
+  &__form {
+    margin-left: 100px;
+
+    @media (max-width: $breakpoint1450) {
+      margin-left: 60px;
+    }
+    @media (max-width: $breakpoint992) {
+      padding: 70px 0 80px;
+      margin-left: 0;
+    }
+    @media (max-width: $breakpoint480) {
+      padding: 40px 15px 50px;
+    }
+
+    &-title {
+      @extend %title-h2;
+      margin-bottom: 12px;
+
+      @media (max-width: $breakpoint768) {
+        text-align: center;
+      }
+      @media (max-width: $breakpoint480) {
+        font-size: 36px;
+      }
+    }
+
+    &-text {
+      @extend %text;
+      margin-bottom: 40px;
+
+      @media (max-width: $breakpoint768) {
+        text-align: center;
+      }
+      @media (max-width: $breakpoint480) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-box {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 56px);
+
+      @media (max-width: $breakpoint768) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &-label {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        width: 24px;
+        height: 24px;
+      }
+
+      &.help {
+        &::after {
+          background-image: url("../img/icons/help.svg");
+        }
+
+        @media (max-width: $breakpoint768) {
+          order: 1;
+        }
+      }
+
+      &.name {
+        &::after {
+          background-image: url("../img/firstName-icon.svg");
+        }
+
+        @media (max-width: $breakpoint768) {
+          order: 2;
+        }
+      }
+
+      &.tel {
+        &::after {
+          background-image: url("../img/icons/phone-fill.svg");
+        }
+
+        @media (max-width: $breakpoint768) {
+          order: 3;
+        }
+      }
+
+      &.place {
+        &::after {
+          background-image: url("../img/icons/map-pin-fill.svg");
+        }
+
+        @media (max-width: $breakpoint768) {
+          order: 5;
+        }
+      }
+
+      &.textarea {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+
+        &::after {
+          background-image: url("../img/icons/psychotherapy-fill.svg");
+        }
+
+        @media (max-width: $breakpoint768) {
+          order: 4;
+        }
+      }
+    }
+
+    &-input {
+      width: 380px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $color-black;
+      // outline: none;
+      padding: 16px 20px 16px 52px;
+      border-radius: 12px;
+      position: relative;
+
+      &::placeholder {
+        color: #a2a8a9;
+      }
+
+      @media (max-width: $breakpoint1450) {
+        width: 300px;
+      }
+      @media (max-width: $breakpoint992) {
+        width: 320px;
+      }
+      @media (max-width: $breakpoint768) {
+        width: 100%;
+      }
+    }
+
+    &-textarea {
+      width: 380px;
+      height: 128px;
+      font-weight: 400;
+      color: $color-black;
+      font-size: 16px;
+      line-height: 24px;
+      border-radius: 12px;
+      resize: none;
+      padding: 16px 20px 16px 52px;
+
+      &::placeholder {
+        color: #a2a8a9;
+      }
+
+      @media (max-width: $breakpoint1450) {
+        width: 300px;
+      }
+      @media (max-width: $breakpoint992) {
+        width: 320px;
+      }
+      @media (max-width: $breakpoint768) {
+        width: 100%;
+      }
+    }
+
+    &-btn {
+      cursor: pointer;
+      width: 165px;
+      height: 56px;
+      border-radius: 12px;
+      background: #56bb90;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      margin-top: 28px;
+
+      @media (max-width: $breakpoint768) {
+        order: 6;
+        display: block;
+        margin: 0 auto;
+      }
+      @media (max-width: $breakpoint480) {
+        height: 50px;
+      }
+    }
+  }
+
+  &__img {
+    margin-top: -20px;
+    max-width: 391px;
+    width: 100%;
+    position: relative;
+    // z-index: -1;
+
+    @media (max-width: $breakpoint1450) {
+      max-width: 300px;
+    }
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+}
