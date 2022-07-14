@@ -20,9 +20,23 @@
     }
   }
 
+  &__inner {
+    &-slide {
+      img {
+        @media (max-width: $breakpoint768) {
+          max-width: 280px;
+        }
+      }
+    }
+  }
+
   .swiper {
     height: 570px;
     overflow: visible;
+
+    @media (max-width: $breakpoint768) {
+      height: 470px;
+    }
   }
 
   .swiper-button-next,
@@ -92,8 +106,9 @@
       margin: 0 !important;
       border-radius: 0;
       width: 100%;
-      height: 4px;
+      height: 6px;
       background-color: #fff;
+      border: 1px solid $color-green;
 
       &:first-child {
         border-top-left-radius: 2px;

@@ -87,24 +87,28 @@ const swiperCertificates = new Swiper(".certificates__inner", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  slidesPerView: 4,
-  spaceBetween: 24,
+  // slidesPerView: 4,
   breakpoints: {
     320: {
       slidesPerView: 1,
-      centeredSlides: true,
+      centeredSlides: true
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 24
     },
     768: {
       slidesPerView: 2,
-      centeredSlides: true,
+      centeredSlides: true
     },
     992: {
       slidesPerView: 3,
       centeredSlides: false,
+      spaceBetween: 24
     },
     1450: {
       slidesPerView: 4,
-      spaceBetween: 24,
+      spaceBetween: 24
     },
   },
 });

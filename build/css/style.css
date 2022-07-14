@@ -1215,8 +1215,9 @@ body.locked {
   margin: 0 !important;
   border-radius: 0;
   width: 100%;
-  height: 4px;
+  height: 6px;
   background-color: #fff;
+  border: 1px solid #56bb90;
 }
 
 .certificates .swiper-pagination-bullet:first-child {
@@ -1553,6 +1554,23 @@ footer .footer__link {
   font-size: 16px;
   line-height: 24px;
   color: #a2a8a9;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+footer .footer__link:hover {
+  color: #fff;
+}
+
+footer .footer__link:hover svg path {
+  fill: #fff;
+}
+
+footer .footer__link svg path {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 footer .footer__contact-info:nth-child(3) {
@@ -3085,6 +3103,14 @@ button.swiper-pagination-bullet {
 
   .certificates {
     padding: 90px 0 70px;
+  }
+
+  .certificates__inner-slide img {
+    max-width: 280px;
+  }
+
+  .certificates .swiper {
+    height: 470px;
   }
 }
 
