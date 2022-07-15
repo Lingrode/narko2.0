@@ -4,22 +4,22 @@
   overflow: hidden;
 
   @media (max-width: $breakpoint768) {
-    padding: 90px 0 70px;
+    padding: 90px 0 90px;
   }
 
   &__title {
     @extend %title-h1;
     margin-bottom: 52px;
-
     @media (max-width: $breakpoint992) {
       font-size: 50px;
     }
-
+    @media (max-width: 580px) {
+      text-align: center;
+    }
     @media (max-width: $breakpoint480) {
       font-size: 36px;
     }
   }
-
   &__inner {
     &-slide {
       @media (max-width: $breakpoint768) {
@@ -28,32 +28,28 @@
         justify-content: center;
       }
       img {
+        cursor: pointer;
+        @media (max-width: 1100px) {
+          max-width: 310px;
+        }
         @media (max-width: $breakpoint768) {
-          max-width: 280px;
+          max-width: 260px;
         }
       }
     }
   }
 
   .swiper {
-    height: 570px;
     overflow: visible;
-
-    @media (max-width: $breakpoint768) {
-      height: 470px;
-    }
   }
-
   .swiper-button-next,
   .swiper-button-prev {
     top: unset;
-    bottom: 0;
+    bottom: -100px;
   }
-
   .box {
-    position: relative;
-    left: 1337px;
-    top: 10px;
+    position: absolute;
+    right: 30px;
     &::before {
       content: "";
       position: absolute;
@@ -63,15 +59,16 @@
       height: 32px;
       background-color: #d0d3d4;
     }
-
     @media (max-width: $breakpoint1450) {
-      left: 950px;
+      right: 40px;
+    }
+    @media (max-width: 1100px) {
+      right: 50px;
     }
     @media (max-width: $breakpoint992) {
       display: none;
     }
   }
-
   .swiper-button-next {
     left: 0;
     &::after {
@@ -82,7 +79,6 @@
       background-image: url("../img/icons/arrow-right-line.svg");
     }
   }
-
   .swiper-button-prev {
     left: -80px;
     &::after {
@@ -93,46 +89,76 @@
       background-image: url("../img/icons/arrow-left-line.svg");
     }
   }
-
-  .swiper-pagination {
-    display: flex;
+  .swiper-scrollbar {
+    bottom: -80px !important;
+    cursor: pointer;
     max-width: 1200px;
+    height: 8px !important;
     align-items: center;
-
+    background-color: #f1f1f1;
+    border-radius: 3px;
     @media (max-width: $breakpoint1450) {
       max-width: 850px;
     }
-
+    @media (max-width: 1160px) {
+      max-width: 760px;
+    }
     @media (max-width: $breakpoint992) {
       max-width: 100%;
     }
-
-    &-bullet {
+    @media (max-width: $breakpoint768) {
+      bottom: -48px !important;
+    }
+    &-drag {
       margin: 0 !important;
-      border-radius: 0;
+      border-radius: 3px;
       width: 100%;
-      height: 6px;
-      background-color: #fff;
-      border-top: 1px solid $color-green;
-      border-bottom: 1px solid $color-green;
-
-      &:first-child {
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
-        border-left: 1px solid $color-green;
+      height: 8px;
+      background-color: $color-green;
+      &:active {
+        opacity: 0.5;
       }
+    }
+  }
+}
 
-      &:last-child {
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-        border-right: 1px solid $color-green;
-      }
-
-      &-active {
-        background-color: $color-green;
-        height: 8px;
-        border-radius: 3px;
-      }
+.img-open {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.97);
+  .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    display: block;
+    height: 90%;
+    @media (max-width: $breakpoint768) {
+      height: 70%;
+    }
+    @media (max-width: $breakpoint480) {
+      height: auto;
+      width: 100%;
+    }
+  }
+  svg {
+    position: absolute;
+    cursor: pointer;
+    top: 50px;
+    right: 25px;
+    width: 50px;
+    path {
+      fill: white;
+    }
+    @media (max-width: $breakpoint992) {
+      top: 20px;
     }
   }
 }

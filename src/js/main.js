@@ -83,11 +83,10 @@ const swiperCertificates = new Swiper(".certificates__inner", {
     prevEl: ".swiper-button-prev",
     nextEl: ".swiper-button-next",
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
   },
-  // slidesPerView: 4,
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -95,20 +94,24 @@ const swiperCertificates = new Swiper(".certificates__inner", {
     },
     576: {
       slidesPerView: 2,
-      // spaceBetween: 24,
+      spaceBetween: 24,
     },
     768: {
       slidesPerView: 2,
-      centeredSlides: true,
+      spaceBetween: -80,
+      centeredSlides: false,
+    },
+    860: {
+      slidesPerView: 2,
+      spaceBetween: -170,
     },
     992: {
       slidesPerView: 3,
-      centeredSlides: false,
-      // spaceBetween: 24,
+      spaceBetween: 24,
     },
     1450: {
       slidesPerView: 4,
-      // spaceBetween: 24,
+      spaceBetween: 24,
     },
   },
 });
@@ -158,19 +161,15 @@ function textInfo() {
   for (let i = 0; i < text.length; i++) {
     text[0].classList.add("textInfo__info-text-open");
     text[i].setAttribute("text-id", i);
-
     parentHeight = parentHeight + text[i].clientHeight;
     window.addEventListener("resize", () => {
       parentHeight = 0;
       for (let i = 0; i < text.length; i++) {
         parentHeight = parentHeight + text[i].clientHeight;
       }
-      if (text[i + 1].classList.contains("textInfo__info-text-open")) {
-        open();
-      } else {
-        close();
-      }
-      console.log(parentHeight);
+      text[i].getAttribute("text-id") > 0 && text[i].classList.contains("textInfo__info-text-open")
+        ? (text[i].parentNode.style.height = parentHeight + "px")
+        : (text[i].parentNode.style.height = text[0].clientHeight + "px");
     });
     function open() {
       btnOpen.style.display = "none";
@@ -200,3 +199,37 @@ function textInfo() {
   btnClose.addEventListener("click", close);
 }
 textInfo();
+
+// Certificate
+function certificate() {
+  const body = document.querySelector("body");
+  const img = document.querySelectorAll(".certificates__inner-slide img");
+  for (let i = 0; i < img.length; i++) {
+    img[i].addEventListener("click", () => {
+      body.classList.add("locked");
+      const imgOpen = document.createElement("div");
+      body.style.overflow = "none";
+      imgOpen.classList.add("img-open");
+      imgOpen.innerHTML = `
+          <div class="container">
+            <img src="${img[i].src}" alt="certificate-id-${i}" />
+            <svg
+              class="close-img"
+              fill="#000000"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 50"
+              width="50px"
+              height="50px">
+              <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/>
+             </svg>
+          </div>`;
+      document.body.append(imgOpen);
+      const closeImg = document.querySelector(".close-img");
+      closeImg.addEventListener("click", () => {
+        body.classList.remove("locked");
+        document.querySelector(".img-open").remove();
+      });
+    });
+  }
+}
+certificate();

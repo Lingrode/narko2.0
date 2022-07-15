@@ -310,8 +310,12 @@
       position: static;
       width: 169px;
       height: 56px;
-      background: #eef8f4;
+      background-color: #eef8f4;
       color: #56bb90;
+      &:hover {
+        background-color: #56bb90;
+        color: #eef8f4;
+      }
       @media (max-width: $breakpoint480) {
         height: 48px;
       }

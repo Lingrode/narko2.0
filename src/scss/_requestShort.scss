@@ -46,10 +46,15 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
-      color: #a2a8a9;
-      outline: none;
-      padding: 16px 48px;
+      color: $color-black;
+      padding: 16px 20px 16px 52px;
       border-radius: 12px;
+      &:focus-visible {
+        outline: 1px solid $color-green;
+      }
+      &::placeholder {
+        color: #a2a8a9;
+      }
       @media (max-width: $breakpoint1450) {
         width: 340px;
       }
@@ -92,6 +97,10 @@
       font-size: 16px;
       line-height: 24px;
       color: #ffffff;
+      transition: 0.2s all;
+      &:hover {
+        opacity: 0.8;
+      }
       @media (max-width: $breakpoint480) {
         width: 50vw;
         margin-top: 16px;

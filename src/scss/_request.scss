@@ -24,7 +24,7 @@
       margin-left: 60px;
     }
     @media (max-width: $breakpoint992) {
-      padding: 70px 0 80px;
+      padding: 70px 0;
       margin-left: 0;
     }
     @media (max-width: $breakpoint480) {
@@ -139,15 +139,15 @@
       font-size: 16px;
       line-height: 24px;
       color: $color-black;
-      // outline: none;
       padding: 16px 20px 16px 52px;
       border-radius: 12px;
       position: relative;
-
+      &:focus-visible {
+        outline: 1px solid $color-green;
+      }
       &::placeholder {
         color: #a2a8a9;
       }
-
       @media (max-width: $breakpoint1450) {
         width: 300px;
       }
@@ -169,7 +169,9 @@
       border-radius: 12px;
       resize: none;
       padding: 16px 20px 16px 52px;
-
+      &:focus-visible {
+        outline: 1px solid $color-green;
+      }
       &::placeholder {
         color: #a2a8a9;
       }
@@ -196,7 +198,13 @@
       line-height: 24px;
       color: #ffffff;
       margin-top: 28px;
-
+      transition: 0.2s all;
+      &:hover {
+        opacity: 0.7;
+      }
+      @media (max-width: $breakpoint1450) {
+        margin-top: 14px;
+      }
       @media (max-width: $breakpoint768) {
         order: 6;
         display: block;
@@ -213,7 +221,6 @@
     max-width: 391px;
     width: 100%;
     position: relative;
-    // z-index: -1;
 
     @media (max-width: $breakpoint1450) {
       max-width: 300px;
