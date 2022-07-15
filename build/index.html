@@ -1299,7 +1299,7 @@
         <div class="accordion">
           <div class="accordion__item">
             <div class="trigger__text-wrapper">
-              <a href="#1" class="trigger__text-link">Наркомания</a>
+              <a href="#" class="trigger__text-link">Наркомания</a>
               <div class="accordion__item-trigger">
                 <div class="accordion__item-svg">
                   <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1824,7 +1824,7 @@
           </div>
           <div class="accordion__item">
             <div class="trigger__text-wrapper">
-              <a href="#1" class="trigger__text-link">Алкоголизм</a>
+              <a href="#" class="trigger__text-link">Алкоголизм</a>
               <div class="accordion__item-trigger">
                 <div class="accordion__item-svg">
                   <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2055,7 +2055,7 @@
           </div>
           <div class="accordion__item">
             <div class="trigger__text-wrapper">
-              <a href="#1" class="trigger__text-link">Другие зависимости</a>
+              <a href="#" class="trigger__text-link">Другие зависимости</a>
               <div class="accordion__item-trigger">
                 <div class="accordion__item-svg">
                   <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2339,7 +2339,7 @@
           </div>
           <div class="accordion__item">
             <div class="trigger__text-wrapper">
-              <a href="#1" class="trigger__text-link">Клиника</a>
+              <a href="#" class="trigger__text-link">Клиника</a>
               <div class="accordion__item-trigger">
                 <div class="accordion__item-svg">
                   <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2475,12 +2475,12 @@
           </div>
           <div class="accordion__item">
             <div class="accordion__item-trigger">
-              <a href="#1" class="trigger__text">Статьи</a>
+              <a href="#" class="trigger__text">Статьи</a>
             </div>
           </div>
           <div class="accordion__item">
             <div class="accordion__item-trigger">
-              <a href="#2" class="trigger__text">Контакты</a>
+              <a href="#" class="trigger__text">Контакты</a>
             </div>
           </div>
         </div>
@@ -2527,7 +2527,7 @@
 </header>
 
     <!-- Main Page -->
-    <main>
+    <main> 
       <section class="top swiper">
   <div class="swiper-wrapper">
     <div class="top__block swiper-slide">
@@ -2705,9 +2705,9 @@
     </div>
   </div>
 </section>
-      <section class="about-wrapper">
+      <section class="about">
   <div class="container">
-    <div class="about">
+    <div class="about__wrapper">
       <div class="about__info">
         <h1 class="about__info-title">О компании</h2>
         <p class="about__info-descr">
@@ -2819,7 +2819,6 @@
   <div class="container">
     <div class="staff__top">
       <h2 class="staff__title">Персонал</h2>
-      <!-- <a href="#"><button class="staff__btn">Весь персонал</button></a> -->
       <div class="box box__start">
         <div class="swiper-button-next swiper-button-next-staff"></div>
         <div class="swiper-button-prev swiper-button-prev-staff"></div>
@@ -2884,9 +2883,9 @@
   </div>
 </section>
 
-      <section class="textInfo__wrapper">
+      <section class="textInfo">
   <div class="container">
-    <div class="textInfo">
+    <div class="textInfo__wrapper">
       <h2 class="textInfo__title">Amet minim mollit</h2>
       <div class="textInfo__info">
         <p class="textInfo__info-text" text-id>
@@ -3029,114 +3028,489 @@
     </div>
   </div>
 </section>
+      <section class="prices">
+  <div class="container">
+    <div class="prices__wrapper">
+      <h2 class="prices__title">Стоимость лечения в стационаре</h2>
+      <div class="prices__items">
+        <div class="prices__item prices__item-1">
+          <div class="prices__item-top">
+            <img src="img/icons/health 1.svg" alt="health 1" />
+            <span>Лечение алкоголизма</span>
+          </div>
+          <div class="prices__current">
+            <div class="prices__current-per-day">
+              <span>6 000 ₽</span>
+              <span class="day">/ сутки</span>
+            </div>
+            <div class="prices__current-line"></div>
+            <div class="prices__current-from-day">
+              <img src="img/icons/first-aid-kit-fill.svg" alt="first-aid-kit" />
+              <span class="day">от 3 дней</span>
+            </div>
+          </div>
+          <ul class="prices__list">
+            <li class="prices__list-item">
+              <img src="img/icons/hotel-bed-fill.svg" alt="hotel-bed" />
+              <span>3-х местная палата</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/nurse-fill.svg" alt="nurse" />
+              <span>Ведение врачом</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/heart-pulse-fill.svg" alt="heart-pulse" />
+              <span>ЭКГ</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/syringe-fill.svg" alt="syringe" />
+              <span>Установка кататера</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/mental-health-fill.svg" alt="mental-health" />
+              <span>Консультирование психиатра и психолога</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/restaurant-2-fill.svg" alt="restaurant" />
+              <span>3-х разовое питание</span>
+            </li>
+          </ul>
+          <button class="prices__sign-up">Записаться</button>
+        </div>
+        <div class="prices__item prices__item-2">
+          <div class="prices__item-top">
+            <img src="img/icons/health 2.svg" alt="health 2" />
+            <span>Лечение психических расстройств</span>
+          </div>
+          <div class="prices__current">
+            <div class="prices__current-per-day">
+              <span>4550 ₽</span>
+              <span class="day">/ сутки</span>
+            </div>
+            <div class="prices__current-line"></div>
+            <div class="prices__current-from-day">
+              <img src="img/icons/first-aid-kit-fill.svg" alt="first-aid-kit" />
+              <span class="day">от 4 дней</span>
+            </div>
+          </div>
+          <ul class="prices__list">
+            <li class="prices__list-item">
+              <img src="img/icons/hotel-bed-fill.svg" alt="hotel-bed" />
+              <span>3-х местная палата</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/nurse-fill.svg" alt="nurse" />
+              <span>Ведение врачом</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/heart-pulse-fill.svg" alt="heart-pulse" />
+              <span>ЭКГ</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/syringe-fill.svg" alt="syringe" />
+              <span>Установка кататера</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/mental-health-fill.svg" alt="mental-health" />
+              <span>Консультирование психиатра и психолога</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/restaurant-2-fill.svg" alt="restaurant" />
+              <span>3-х разовое питание</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/mac-fill.svg" alt="mac" />
+              <span>ТВ в палате</span>
+            </li>
+          </ul>
+          <button class="prices__sign-up">Записаться</button>
+        </div>
+        <div class="prices__item prices__item-3">
+          <div class="prices__item-top">
+            <img src="img/icons/health 3.svg" alt="health 3" />
+            <span>Лечение наркомании</span>
+          </div>
+          <div class="prices__current">
+            <div class="prices__current-per-day">
+              <span>6 000 ₽</span>
+              <span class="day">/ сутки</span>
+            </div>
+            <div class="prices__current-line"></div>
+            <div class="prices__current-from-day">
+              <img src="img/icons/first-aid-kit-fill.svg" alt="first-aid-kit" />
+              <span class="day">от 3 дней</span>
+            </div>
+          </div>
+          <ul class="prices__list">
+            <li class="prices__list-item">
+              <img src="img/icons/hotel-bed-fill.svg" alt="hotel-bed" />
+              <span>3-х местная палата</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/nurse-fill.svg" alt="nurse" />
+              <span>Ведение врачом</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/heart-pulse-fill.svg" alt="heart-pulse" />
+              <span>ЭКГ</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/syringe-fill.svg" alt="syringe" />
+              <span>Установка кататера</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/mental-health-fill.svg" alt="mental-health" />
+              <span>Консультирование психиатра и психолога</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/restaurant-2-fill.svg" alt="restaurant" />
+              <span>3-х разовое питание</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/mac-fill.svg" alt="mac" />
+              <span>ТВ в палате</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/conditioner-fill.svg" alt="conditioner" />
+              <span>Кондиционер</span>
+            </li>
+          </ul>
+          <button class="prices__sign-up">Записаться</button>
+        </div>
+        <div class="prices__item prices__item-4">
+          <div class="prices__item-top">
+            <img src="img/icons/health 4.svg" alt="health 4" />
+            <span>Программа профилактики срыва / рецидива</span>
+          </div>
+          <div class="prices__current">
+            <div class="prices__current-per-day">
+              <span>6 000 ₽</span>
+              <span class="day">/ сутки</span>
+            </div>
+            <div class="prices__current-line"></div>
+            <div class="prices__current-from-day">
+              <img src="img/icons/first-aid-kit-fill.svg" alt="first-aid-kit" />
+              <span class="day">от 3 дней</span>
+            </div>
+          </div>
+          <ul class="prices__list">
+            <li class="prices__list-item">
+              <img src="img/icons/hotel-bed-fill.svg" alt="hotel-bed" />
+              <span>Индивидуальная амбулаторная система занятий под руководством психолога</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/nurse-fill.svg" alt="nurse" />
+              <span>Групповые занятия с психологом</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/heart-pulse-fill.svg" alt="heart-pulse" />
+              <span>Осмотры нарколога</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/syringe-fill.svg" alt="syringe" />
+              <span>Консультации нарколога и психолога</span>
+            </li>
+            <li class="prices__list-item">
+              <img src="img/icons/mental-health-fill.svg" alt="mental-health" />
+              <span>Общественные мероприятия</span>
+            </li>
+          </ul>
+          <button class="prices__sign-up">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="reviews">
+  <div class="container">
+    <div class="reviews__top">
+      <h1 class="reviews__top-title">Отзывы</h1>
+      <a href="#"><button class="reviews__top-btn">Все отзывы</button></a>
+    </div>
+    <div class="reviews__inner swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide reviews__inner-slide">
+          <img src="img/video-reviews.png" alt="reviews" />
+          <div class="reviews__inner-slide-date"><span>28.05.2021</span></div>
+        </div>
+        <div class="swiper-slide reviews__inner-slide">
+          <img src="img/video-reviews.png" alt="reviews" />
+          <div class="reviews__inner-slide-date"><span>28.05.2021</span></div>
+        </div>
+        <div class="swiper-slide reviews__inner-slide">
+          <img src="img/video-reviews.png" alt="reviews" />
+          <div class="reviews__inner-slide-date"><span>28.05.2021</span></div>
+        </div>
+        <div class="swiper-slide reviews__inner-slide">
+          <img src="img/video-reviews.png" alt="reviews" />
+          <div class="reviews__inner-slide-date"><span>28.05.2021</span></div>
+        </div>
+        <div class="swiper-slide reviews__inner-slide">
+          <img src="img/video-reviews.png" alt="reviews" />
+          <div class="reviews__inner-slide-date"><span>28.05.2021</span></div>
+        </div>
+        <div class="swiper-slide reviews__inner-slide">
+          <img src="img/video-reviews.png" alt="reviews" />
+          <div class="reviews__inner-slide-date"><span>28.05.2021</span></div>
+        </div>
+        <div class="swiper-slide reviews__inner-slide">
+          <img src="img/video-reviews.png" alt="reviews" />
+          <div class="reviews__inner-slide-date"><span>28.05.2021</span></div>
+        </div>
+      </div>
+      <div class="swiper-scrollbar"></div>
+      <div class="box">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="contact">
+  <div class="container">
+    <div class="contact__wrapper">
+      <div class="contact__start">
+        <h6 class="contact__start-title">Не хочет лечиться?</h6>
+      </div>
+      <div class="contact__end">
+        <div class="contact__end-inner">
+          <p class="contact__end-desr">Наши специалисты уговорят пройти реабелитацию без насилия</p>
+          <div class="contact__end-tel">
+            <svg
+              class="contact__end-tel-icon"
+              width="58"
+              height="58"
+              viewBox="0 0 58 58"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M50.75 39.6817V48.227C50.7503 48.8388 50.5185 49.428 50.1013 49.8756C49.6842 50.3233 49.1128 50.596 48.5025 50.6388C47.4464 50.7113 46.5837 50.75 45.9167 50.75C24.5606 50.75 7.25 33.4394 7.25 12.0833C7.25 11.4163 7.28625 10.5536 7.36117 9.4975C7.404 8.88716 7.67674 8.31578 8.12436 7.89865C8.57198 7.48153 9.16116 7.24972 9.773 7.25H18.3183C18.6181 7.2497 18.9073 7.36083 19.1297 7.5618C19.3521 7.76277 19.4919 8.03924 19.5218 8.3375C19.5774 8.89333 19.6282 9.33558 19.6765 9.6715C20.1568 13.0232 21.141 16.2831 22.5958 19.3406C22.8254 19.8239 22.6756 20.4015 22.2406 20.7108L17.0254 24.4373C20.2141 31.8673 26.1352 37.7883 33.5651 40.977L37.2868 35.7715C37.4389 35.5588 37.6608 35.4063 37.9139 35.3405C38.1669 35.2747 38.4351 35.2998 38.6715 35.4114C41.7286 36.8635 44.9877 37.8453 48.3382 38.3235C48.6741 38.3718 49.1163 38.425 49.6673 38.4782C49.9652 38.5087 50.241 38.6487 50.4415 38.8711C50.642 39.0934 50.7528 39.3823 50.7524 39.6817H50.75Z"
+                fill="#56BB90"
+              />
+            </svg>
+            <a class="contact__end-tel-link" href="tel:+8 495 000 00 00">8 495 000 00 00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="news">
+  <div class="container">
+    <div class="news__top">
+      <h1 class="news__top-title">Читайте также</h1>
+      <a href="#"><button class="news__top-btn">Все новости</button></a>
+    </div>
+    <div class="news__inner swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-1.png" alt="news-1" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-2.png" alt="news-2" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-3.png" alt="news-3" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-4.png" alt="news-4" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-1.png" alt="news-1" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-2.png" alt="news-2" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-3.png" alt="news-3" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-4.png" alt="news-4" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-1.png" alt="news-1" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-2.png" alt="news-2" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-3.png" alt="news-3" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+        <div class="swiper-slide news__inner-slide">
+          <div class="news__inner-slide-date"><span>28.05.2021</span></div>
+          <img src="img/news-4.png" alt="news-4" />
+          <p class="news__inner-slide-descr">
+            Вшивание Эспераль - надежный способ избавиться от алкоголя
+          </p>
+        </div>
+      </div>
+      <div class="swiper-scrollbar"></div>
+      <div class="box">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
     <!-- Footer -->
     <footer>
   <div class="container">
     <div class="footer">
-      <div class="footer__left">
-        <div class="footer__data">
-          <div class="footer__date-item">
-            <span class="footer__date-item-title">ИНН</span>
-            <span class="footer__date-item-info">1234567891232</span>
-          </div>
-          <div class="footer__date-item">
-            <span class="footer__date-item-title">ОГРН</span>
-            <span class="footer__date-item-info">1234567891232</span>
-          </div>
-          <div class="footer__date-item">
-            <span class="footer__date-item-title">Лицензия</span>
-            <span class="footer__date-item-info">1234567891232</span>
-          </div>
+      <!-- <div class="footer__left"> -->
+      <div class="footer__data">
+        <div class="footer__date-item">
+          <span class="footer__date-item-title">ИНН</span>
+          <span class="footer__date-item-info">1234567891232</span>
         </div>
-        <ul class="footer__service footer__category">
-          <li class="footer__service-title footer__title">Услуги</li>
-          <li class="footer__service-link footer__link"><a href="#">Наркомания</a></li>
-          <li class="footer__service-link footer__link"><a href="#">Алкоголизм</a></li>
-          <li class="footer__service-link footer__link"><a href="#">Другие зависимости</a></li>
-          <li class="footer__service-link footer__link"><a href="#">Клиника</a></li>
-        </ul>
+        <div class="footer__date-item">
+          <span class="footer__date-item-title">ОГРН</span>
+          <span class="footer__date-item-info">1234567891232</span>
+        </div>
+        <div class="footer__date-item">
+          <span class="footer__date-item-title">Лицензия</span>
+          <span class="footer__date-item-info">1234567891232</span>
+        </div>
       </div>
-      <div class="footer__right">
-        <ul class="footer__relative footer__category">
-          <li class="footer__relative-title footer__title">Родственникам</li>
-          <li class="footer__relative-link footer__link"><a href="#">Врачи</a></li>
-          <li class="footer__relative-link footer__link">
-            <a href="#">Процедура прииема в клинику</a>
-          </li>
-          <li class="footer__relative-link footer__link"><a href="#">Статьи</a></li>
-          <li class="footer__relative-link footer__link"><a href="#">Контакты</a></li>
-        </ul>
-        <ul class="footer__contact footer__category">
-          <li class="footer__contact-title footer__title">Контакты</li>
-          <li class="footer__contact-info footer__end-link">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 9C9.825 9 10.5 8.325 10.5 7.5C10.5 6.675 9.825 6 9 6C8.175 6 7.5 6.675 7.5 7.5C7.5 8.325 8.175 9 9 9ZM9 1.5C12.15 1.5 15 3.915 15 7.65C15 10.035 13.1625 12.84 9.495 16.0725C9.21 16.32 8.7825 16.32 8.4975 16.0725C4.8375 12.84 3 10.035 3 7.65C3 3.915 5.85 1.5 9 1.5Z"
-                fill="#4B5355"
-              />
-            </svg>
-            <span>г. Хабаровск, ул. Пушкинская 25</span>
-          </li>
-          <li class="footer__contact-info footer__end-link">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M8.9925 1.5C4.8525 1.5 1.5 4.86 1.5 9C1.5 13.14 4.8525 16.5 8.9925 16.5C13.14 16.5 16.5 13.14 16.5 9C16.5 4.86 13.14 1.5 8.9925 1.5ZM9.5 6C9.5 5.44772 9.05228 5 8.5 5C7.94772 5 7.5 5.44772 7.5 6V9.5C7.5 9.83435 7.6671 10.1466 7.9453 10.3321L10.9453 12.3321C11.4048 12.6384 12.0257 12.5142 12.3321 12.0547C12.6384 11.5952 12.5142 10.9743 12.0547 10.6679L9.5 8.96482V6Z"
-                fill="#4B5355"
-              />
-            </svg>
-            <span>Круглосуточно</span>
-          </li>
-          <li class="footer__end-link footer__link">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.75 12.315V14.967C15.7501 15.1569 15.6781 15.3397 15.5487 15.4786C15.4192 15.6176 15.2419 15.7022 15.0525 15.7155C14.7247 15.738 14.457 15.75 14.25 15.75C7.62225 15.75 2.25 10.3778 2.25 3.75C2.25 3.543 2.26125 3.27525 2.2845 2.9475C2.29779 2.75808 2.38244 2.58076 2.52135 2.45131C2.66027 2.32186 2.84312 2.24991 3.033 2.25H5.685C5.77803 2.24991 5.86777 2.28439 5.9368 2.34677C6.00582 2.40914 6.0492 2.49494 6.0585 2.5875C6.07575 2.76 6.0915 2.89725 6.1065 3.0015C6.25555 4.04169 6.561 5.05337 7.0125 6.00225C7.08375 6.15225 7.03725 6.3315 6.90225 6.4275L5.28375 7.584C6.27334 9.88984 8.11091 11.7274 10.4167 12.717L11.5717 11.1015C11.619 11.0355 11.6878 10.9882 11.7664 10.9677C11.8449 10.9473 11.9281 10.9551 12.0015 10.9897C12.9503 11.4404 13.9617 11.7451 15.0015 11.8935C15.1058 11.9085 15.243 11.925 15.414 11.9415C15.5064 11.951 15.592 11.9944 15.6543 12.0634C15.7165 12.1324 15.7509 12.2221 15.7507 12.315H15.75Z"
-                fill="#4B5355"
-              />
-            </svg>
-            <a class="footer__contact-link footer__link" href="tel:+8 800 000 00 00">
-              8 800 000 00 00
-            </a>
-          </li>
-          <li class="footer__end-link footer__link">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.75 12.315V14.967C15.7501 15.1569 15.6781 15.3397 15.5487 15.4786C15.4192 15.6176 15.2419 15.7022 15.0525 15.7155C14.7247 15.738 14.457 15.75 14.25 15.75C7.62225 15.75 2.25 10.3778 2.25 3.75C2.25 3.543 2.26125 3.27525 2.2845 2.9475C2.29779 2.75808 2.38244 2.58076 2.52135 2.45131C2.66027 2.32186 2.84312 2.24991 3.033 2.25H5.685C5.77803 2.24991 5.86777 2.28439 5.9368 2.34677C6.00582 2.40914 6.0492 2.49494 6.0585 2.5875C6.07575 2.76 6.0915 2.89725 6.1065 3.0015C6.25555 4.04169 6.561 5.05337 7.0125 6.00225C7.08375 6.15225 7.03725 6.3315 6.90225 6.4275L5.28375 7.584C6.27334 9.88984 8.11091 11.7274 10.4167 12.717L11.5717 11.1015C11.619 11.0355 11.6878 10.9882 11.7664 10.9677C11.8449 10.9473 11.9281 10.9551 12.0015 10.9897C12.9503 11.4404 13.9617 11.7451 15.0015 11.8935C15.1058 11.9085 15.243 11.925 15.414 11.9415C15.5064 11.951 15.592 11.9944 15.6543 12.0634C15.7165 12.1324 15.7509 12.2221 15.7507 12.315H15.75Z"
-                fill="#4B5355"
-              />
-            </svg>
-            <a class="footer__contact-link footer__link" href="tel:+8 495 000 00 00">
-              8 495 000 00 00
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="footer__service footer__category">
+        <li class="footer__service-title footer__title">Услуги</li>
+        <li class="footer__service-link footer__link"><a href="#addiction">Наркомания</a></li>
+        <li class="footer__service-link footer__link"><a href="#alcoholism">Алкоголизм</a></li>
+        <li class="footer__service-link footer__link">
+          <a href="#other-dependencies">Другие зависимости</a>
+        </li>
+        <li class="footer__service-link footer__link"><a href="#clinic">Клиника</a></li>
+      </ul>
+      <!-- </div> -->
+      <!-- <div class="footer__right"> -->
+      <ul class="footer__relative footer__category">
+        <li class="footer__relative-title footer__title">Родственникам</li>
+        <li class="footer__relative-link footer__link"><a href="#">Врачи</a></li>
+        <li class="footer__relative-link footer__link">
+          <a href="#">Процедура прииема в клинику</a>
+        </li>
+        <li class="footer__relative-link footer__link"><a href="#">Статьи</a></li>
+        <li class="footer__relative-link footer__link"><a href="#">Контакты</a></li>
+      </ul>
+      <ul class="footer__contact footer__category">
+        <li class="footer__contact-title footer__title">Контакты</li>
+        <li class="footer__contact-info footer__end-link">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 9C9.825 9 10.5 8.325 10.5 7.5C10.5 6.675 9.825 6 9 6C8.175 6 7.5 6.675 7.5 7.5C7.5 8.325 8.175 9 9 9ZM9 1.5C12.15 1.5 15 3.915 15 7.65C15 10.035 13.1625 12.84 9.495 16.0725C9.21 16.32 8.7825 16.32 8.4975 16.0725C4.8375 12.84 3 10.035 3 7.65C3 3.915 5.85 1.5 9 1.5Z"
+              fill="#4B5355"
+            />
+          </svg>
+          <span>г. Хабаровск, ул. Пушкинская 25</span>
+        </li>
+        <li class="footer__contact-info footer__end-link">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.9925 1.5C4.8525 1.5 1.5 4.86 1.5 9C1.5 13.14 4.8525 16.5 8.9925 16.5C13.14 16.5 16.5 13.14 16.5 9C16.5 4.86 13.14 1.5 8.9925 1.5ZM9.5 6C9.5 5.44772 9.05228 5 8.5 5C7.94772 5 7.5 5.44772 7.5 6V9.5C7.5 9.83435 7.6671 10.1466 7.9453 10.3321L10.9453 12.3321C11.4048 12.6384 12.0257 12.5142 12.3321 12.0547C12.6384 11.5952 12.5142 10.9743 12.0547 10.6679L9.5 8.96482V6Z"
+              fill="#4B5355"
+            />
+          </svg>
+          <span>Круглосуточно</span>
+        </li>
+        <li class="footer__end-link footer__link">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.75 12.315V14.967C15.7501 15.1569 15.6781 15.3397 15.5487 15.4786C15.4192 15.6176 15.2419 15.7022 15.0525 15.7155C14.7247 15.738 14.457 15.75 14.25 15.75C7.62225 15.75 2.25 10.3778 2.25 3.75C2.25 3.543 2.26125 3.27525 2.2845 2.9475C2.29779 2.75808 2.38244 2.58076 2.52135 2.45131C2.66027 2.32186 2.84312 2.24991 3.033 2.25H5.685C5.77803 2.24991 5.86777 2.28439 5.9368 2.34677C6.00582 2.40914 6.0492 2.49494 6.0585 2.5875C6.07575 2.76 6.0915 2.89725 6.1065 3.0015C6.25555 4.04169 6.561 5.05337 7.0125 6.00225C7.08375 6.15225 7.03725 6.3315 6.90225 6.4275L5.28375 7.584C6.27334 9.88984 8.11091 11.7274 10.4167 12.717L11.5717 11.1015C11.619 11.0355 11.6878 10.9882 11.7664 10.9677C11.8449 10.9473 11.9281 10.9551 12.0015 10.9897C12.9503 11.4404 13.9617 11.7451 15.0015 11.8935C15.1058 11.9085 15.243 11.925 15.414 11.9415C15.5064 11.951 15.592 11.9944 15.6543 12.0634C15.7165 12.1324 15.7509 12.2221 15.7507 12.315H15.75Z"
+              fill="#4B5355"
+            />
+          </svg>
+          <a class="footer__contact-link footer__link" href="tel:+8 800 000 00 00">
+            8 800 000 00 00
+          </a>
+        </li>
+        <li class="footer__end-link footer__link">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.75 12.315V14.967C15.7501 15.1569 15.6781 15.3397 15.5487 15.4786C15.4192 15.6176 15.2419 15.7022 15.0525 15.7155C14.7247 15.738 14.457 15.75 14.25 15.75C7.62225 15.75 2.25 10.3778 2.25 3.75C2.25 3.543 2.26125 3.27525 2.2845 2.9475C2.29779 2.75808 2.38244 2.58076 2.52135 2.45131C2.66027 2.32186 2.84312 2.24991 3.033 2.25H5.685C5.77803 2.24991 5.86777 2.28439 5.9368 2.34677C6.00582 2.40914 6.0492 2.49494 6.0585 2.5875C6.07575 2.76 6.0915 2.89725 6.1065 3.0015C6.25555 4.04169 6.561 5.05337 7.0125 6.00225C7.08375 6.15225 7.03725 6.3315 6.90225 6.4275L5.28375 7.584C6.27334 9.88984 8.11091 11.7274 10.4167 12.717L11.5717 11.1015C11.619 11.0355 11.6878 10.9882 11.7664 10.9677C11.8449 10.9473 11.9281 10.9551 12.0015 10.9897C12.9503 11.4404 13.9617 11.7451 15.0015 11.8935C15.1058 11.9085 15.243 11.925 15.414 11.9415C15.5064 11.951 15.592 11.9944 15.6543 12.0634C15.7165 12.1324 15.7509 12.2221 15.7507 12.315H15.75Z"
+              fill="#4B5355"
+            />
+          </svg>
+          <a class="footer__contact-link footer__link" href="tel:+8 495 000 00 00">
+            8 495 000 00 00
+          </a>
+        </li>
+      </ul>
+      <!-- </div> -->
     </div>
     <div class="footer__end">
       <span class="footer__end-date footer__end-item">@2021</span>

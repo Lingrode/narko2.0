@@ -3,43 +3,36 @@ footer {
   display: block;
   background-color: #162629;
   .footer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    justify-content: center;
     padding: 88px 0 100px 0;
-    gap: 50px;
-    @media (max-width: $breakpoint992) {
-      flex-wrap: wrap;
+    grid-gap: 0 24px;
+    grid-auto-columns: calc(25% - 24px);
+    grid-auto-flow: column;
+    @media (max-width: 1240px) {
+      grid-auto-columns: calc(45% - 24px);
+      grid-gap: 36px 24px;
       justify-content: space-evenly;
+      @media (max-width: 655px) {
+        grid-auto-columns: 100%;
+      }
     }
-    @media (max-width: 550px) {
-      padding: 50px 0 70px 0;
+    &__date,
+    &__service {
+      @media (max-width: 1240px) {
+        grid-column: 1/2;
+      }
     }
-    &__right,
-    &__left {
-      display: flex;
-      justify-content: space-between;
-      gap: 210px;
-      @media (max-width: $breakpoint1450) {
-        gap: 150px;
+    &__relative,
+    &__contact {
+      @media (max-width: 1240px) {
+        grid-column: 2/2;
       }
-      @media (max-width: 1190px) {
-        gap: 120px;
-      }
-      @media (max-width: 1130px) {
-        gap: 100px;
-      }
-      @media (max-width: 1070px) {
-        gap: 65px;
-      }
-      @media (max-width: $breakpoint992) {
-        width: 100%;
-        justify-content: space-evenly;
-      }
-      @media (max-width: 650px) {
-        flex-direction: column;
-      }
-      @media (max-width: 550px) {
-        gap: 50px;
+    }
+    &__data,
+    &__category {
+      @media (max-width: 655px) {
+        grid-column: 1/1;
       }
     }
     // .footer__data
@@ -100,6 +93,7 @@ footer {
     }
     &__link {
       a {
+        white-space: nowrap;
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
@@ -153,6 +147,12 @@ footer {
       img {
         width: 18px;
         height: 18px;
+      }
+      span {
+        white-space: nowrap;
+        @media (max-width: 655px) {
+          white-space: normal;
+        }
       }
     }
     // .footer__end-item

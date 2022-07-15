@@ -79,7 +79,7 @@ function accordion() {
 }
 accordion();
 
-// Swiper
+// Top Swiper
 const swiperTop = new Swiper(".top.swiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -93,6 +93,7 @@ const swiperTop = new Swiper(".top.swiper", {
   },
 });
 
+// Certificates Swiper
 const swiperCertificates = new Swiper(".certificates__inner", {
   navigation: {
     prevEl: ".swiper-button-prev",
@@ -131,6 +132,7 @@ const swiperCertificates = new Swiper(".certificates__inner", {
   },
 });
 
+// Swiper Swiper
 const swiperStaff = new Swiper(".staff-swiper", {
   navigation: {
     nextEl: ".swiper-button-next-staff",
@@ -144,6 +146,86 @@ const swiperStaff = new Swiper(".staff-swiper", {
     720: {
       slidesPerView: 4,
       speed: 0,
+    },
+  },
+});
+
+// Reviews Swiper
+const swiperReviews = new Swiper(".reviews__inner", {
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 24,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: -80,
+      centeredSlides: false,
+    },
+    860: {
+      slidesPerView: 2,
+      spaceBetween: -170,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    1450: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+  },
+});
+
+// News Swiper
+const swiperNews = new Swiper(".news__inner", {
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 24,
+    },
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: -80,
+      centeredSlides: false,
+    },
+    860: {
+      slidesPerView: 2,
+      spaceBetween: -170,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    1450: {
+      slidesPerView: 4,
+      spaceBetween: 24,
     },
   },
 });
@@ -223,7 +305,6 @@ function certificate() {
     img[i].addEventListener("click", () => {
       body.classList.add("locked");
       const imgOpen = document.createElement("div");
-      body.style.overflow = "none";
       imgOpen.classList.add("img-open");
       imgOpen.innerHTML = `
           <div class="container">
@@ -248,4 +329,27 @@ function certificate() {
   }
 }
 certificate();
+
+// Price
+function price() {
+  const request = document.querySelector(".request");
+  const requestTarget = document.querySelectorAll(".prices__sign-up");
+  requestTarget.forEach((item) => {
+    item.addEventListener("click", () => {
+      request.scrollIntoView({ block: "start", behavior: "smooth" });
+    });
+  });
+}
+price();
+
+// Links
+function links() {
+  const links = document.querySelectorAll("a");
+  for (let i = 0; i < links.length; i++) {
+    if (links[i].href.includes("#")) {
+      console.log(links[i].href);
+    }
+  }
+}
+links();
 

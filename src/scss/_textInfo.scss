@@ -1,12 +1,11 @@
 .textInfo {
-  padding: 150px 0;
-  @media (max-width: $breakpoint768) {
-    padding: 75px 0;
-  }
-
+  background-color: #f9fafb;
   // .textInfo__wrapper
   &__wrapper {
-    background-color: #f9fafb;
+    padding: 150px 0 75px;
+    @media (max-width: $breakpoint768) {
+      padding: 80px 0 40px;
+    }
   }
   // .textInfo__title
   &__title {

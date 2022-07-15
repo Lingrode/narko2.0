@@ -1,0 +1,193 @@
+.prices {
+  background: #f9fafb;
+  padding: 180px 0;
+  @media (max-width: $breakpoint992) {
+    padding: 90px 0;
+  }
+  @media (max-width: $breakpoint480) {
+    padding: 50px 0;
+  }
+  // .prices__title
+  &__title {
+    margin: 0 auto;
+    max-width: 688px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    text-align: center;
+    color: #162629;
+    @media (max-width: $breakpoint992) {
+      font-size: 50px;
+    }
+    @media (max-width: 550px) {
+      font-size: 40px;
+    }
+    @media (max-width: $breakpoint480) {
+      font-size: 32px;
+    }
+  }
+  // .prices__items
+  &__items {
+    display: grid;
+    justify-content: center;
+    grid-gap: 0 24px;
+    grid-auto-columns: calc(25% - 24px);
+    grid-auto-flow: column;
+    padding-top: 56px;
+    @media (max-width: $breakpoint1450) {
+      grid-auto-columns: calc(25% - 16px);
+      grid-gap: 0 16px;
+    }
+    @media (max-width: 1240px) {
+      justify-content: space-evenly;
+      grid-auto-columns: 332px;
+    }
+    @media (max-width: $breakpoint768) {
+      grid-gap: 24px;
+      grid-auto-columns: minmax(280px, 400px);
+    }
+    @media (max-width: $breakpoint480) {
+      padding-top: 36px;
+    }
+  }
+  // .prices__item
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 706px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px 0 12px 0;
+    &-1,
+    &-2,
+    &-3,
+    &-4 {
+      @media (max-width: $breakpoint768) {
+        grid-column: 1/1;
+      }
+    }
+    &-2,
+    &-4 {
+      @media (max-width: 1240px) {
+        grid-column: 2/2;
+      }
+      .prices__item-top span {
+        max-width: 300px;
+      }
+    }
+    &-1,
+    &-3 {
+      @media (max-width: 1240px) {
+        grid-column: 1/2;
+      }
+      .prices__item-top span {
+        max-width: 200px;
+      }
+    }
+  }
+  // .prices__item-top
+  &__item-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #162629;
+    margin-bottom: 18px;
+  }
+  // .prices__current
+  &__current {
+    position: relative;
+    left: -8px;
+    background: #eef8f4;
+    box-shadow: 0px 4px 17px -6px rgba(86, 187, 144, 0.39);
+    border-radius: 0px 8px 8px 0px;
+    padding: 12px 24px 18px 32px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 0;
+      width: 8px;
+      height: 6px;
+      background-image: url(../img/icons/current-item.svg);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 8px;
+      height: 6px;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      background-image: url(../img/icons/current-item.svg);
+    }
+    .day {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #162629;
+    }
+  }
+  // .prices__current-per-day
+  &__current-per-day {
+    span:first-child {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 150%;
+      color: #56bb90;
+    }
+  }
+  // .prices__current-line
+  &__current-line {
+    margin: 5px 0 12px 0;
+    height: 2px;
+    max-width: 100%;
+    width: 100%;
+    background-color: white;
+  }
+  // .prices__current-from-day
+  &__current-from-day {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  // .prices__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 27px 24px 30px 24px;
+  }
+  // .prices__list-item
+  &__list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  // .prices__sign-up
+  &__sign-up {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 300px;
+    width: 100%;
+    height: 56px;
+    background: #56bb90;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #ffffff;
+    transition: 0.2s all;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
