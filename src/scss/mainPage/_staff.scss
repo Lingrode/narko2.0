@@ -306,6 +306,9 @@
       }
     }
     // .staff__info-btn
+    a {
+      border-radius: 12px;
+    }
     &__info-btn {
       position: static;
       width: 169px;

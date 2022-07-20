@@ -11,8 +11,8 @@ let path = {
   },
   src: {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
-    css: source_folder + "/scss/style.scss",
-    js: source_folder + "/js/scripts.js",
+    css: source_folder + "/scss/*.scss",
+    js: source_folder + "/js/*.js",
     img: source_folder + "/img/**/*.+(png|jpg|jpeg|ico|svg|webp)",
     fonts: source_folder + "/fonts/*",
   },
@@ -47,7 +47,7 @@ function browserSync(params) {
     },
     port: 3000,
     notify: false,
-    tunnel: true,
+    // tunnel: true,
   });
 }
 

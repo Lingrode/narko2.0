@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <title>Наркоклиника</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/styleMain.min.css" />
   </head>
   <body class="main__body">
     <!-- Header -->
@@ -2759,9 +2760,8 @@
             required
           />
         </label>
-        <label for="sent">
-          <input class="form__input-sent" id="sent" type="submit" value="Отправить" />
-        </label>
+        <input type="datetime" name="date" id="date" />
+        <button class="form__input-sent" id="sent-label" type="submit">Отправить</button>
       </form>
     </div>
   </div>
@@ -2947,6 +2947,7 @@
           <label class="request__form-label help" for="help">
             <input
               class="request__form-input"
+              id="help"
               type="text"
               name="help"
               placeholder="Кому нужна помощь"
@@ -2957,17 +2958,19 @@
           <label class="request__form-label name" for="firstName">
             <input
               class="request__form-input"
+              id="firstName"
               type="text"
               name="firstName"
               placeholder="Ваше имя"
               required
             />
           </label>
-          <label class="request__form-label tel" for="tel">
+          <label class="request__form-label tel" for="phone">
             <input
               class="request__form-input"
-              type="number"
-              name="tel"
+              id="phone"
+              type="tel"
+              name="phone"
               placeholder="Номер телефона"
               required
             />
@@ -2975,6 +2978,7 @@
           <label class="request__form-label textarea" for="textarea">
             <textarea
               class="request__form-textarea"
+              id="textarea"
               name="textarea"
               placeholder="От чего лечить"
               required
@@ -2983,13 +2987,15 @@
           <label class="request__form-label place" for="place">
             <input
               class="request__form-input"
+              id="place"
               type="text"
               name="place"
               placeholder="Где забирать"
               required
             />
           </label>
-          <button class="request__form-btn" type="submit">Отправить</button>
+          <input type="datetime" name="date" id="date" />
+          <button class="request__form-btn" id="sent-label" type="submit">Отправить</button>
         </div>
       </form>
       <img class="request__img" src="img/request-img.png" alt="request image" />
@@ -3523,5 +3529,5 @@
 </footer>
 
   </body>
-  <script src="./js/scripts.min.js"></script>
+  <script src="./js/scriptMain.min.js"></script>
 </html>

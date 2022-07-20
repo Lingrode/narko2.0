@@ -40,3 +40,75 @@ body {
         opacity: 1;
     }
 }
+
+.massage-target {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    z-index: 1000;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transform: translateX(-50%);
+    transition: 3s opacity;
+    p {
+        white-space: nowrap;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+    }
+    svg {
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 15px;
+        height: 15px;
+        path {
+            fill: white;
+        }
+    }
+}
+.success {
+    background: #56bb90;
+    animation: targetSuccess 0.2s 1;
+}
+
+.error {
+    background: #ff7575;
+    animation: targetError 0.17s 2;
+}
+
+@keyframes targetSuccess {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.1);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes targetError {
+    0% {
+        transform: translateX(-50%);
+    }
+    20% {
+        transform: translateX(-60%);
+    }
+    80% {
+        transform: translateX(-40%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+#date {
+    display: none;
+}

@@ -8,6 +8,7 @@
           <label class="request__form-label help" for="help">
             <input
               class="request__form-input"
+              id="help"
               type="text"
               name="help"
               placeholder="Кому нужна помощь"
@@ -18,17 +19,19 @@
           <label class="request__form-label name" for="firstName">
             <input
               class="request__form-input"
+              id="firstName"
               type="text"
               name="firstName"
               placeholder="Ваше имя"
               required
             />
           </label>
-          <label class="request__form-label tel" for="tel">
+          <label class="request__form-label tel" for="phone">
             <input
               class="request__form-input"
-              type="number"
-              name="tel"
+              id="phone"
+              type="tel"
+              name="phone"
               placeholder="Номер телефона"
               required
             />
@@ -36,6 +39,7 @@
           <label class="request__form-label textarea" for="textarea">
             <textarea
               class="request__form-textarea"
+              id="textarea"
               name="textarea"
               placeholder="От чего лечить"
               required
@@ -44,13 +48,15 @@
           <label class="request__form-label place" for="place">
             <input
               class="request__form-input"
+              id="place"
               type="text"
               name="place"
               placeholder="Где забирать"
               required
             />
           </label>
-          <button class="request__form-btn" type="submit">Отправить</button>
+          <input type="datetime" name="date" id="date" />
+          <button class="request__form-btn" id="sent-label" type="submit">Отправить</button>
         </div>
       </form>
       <img class="request__img" src="img/request-img.png" alt="request image" />

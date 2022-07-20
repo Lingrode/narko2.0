@@ -40,17 +40,24 @@
         flex-direction: column;
       }
     }
+    #sent-label p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
     // .form__input-item
     &__input-item {
-      width: 380px;
+      width: 378px;
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
       color: $color-black;
-      padding: 16px 20px 16px 52px;
+      padding: 15px 20px 15px 52px;
       border-radius: 12px;
+      outline: none;
+      border: 1px solid white;
       &:focus-visible {
-        outline: 1px solid $color-green;
+        border: 1px solid $color-green;
       }
       &::placeholder {
         color: #a2a8a9;
@@ -87,7 +94,8 @@
       background-image: url(../img/tel-icon.svg);
     }
     // .form__input-sent
-    &__input-sent {
+    &__input-sent,
+    &__input-sent-loading {
       cursor: pointer;
       width: 165px;
       height: 56px;
@@ -95,15 +103,29 @@
       background: #56bb90;
       font-weight: 500;
       font-size: 16px;
-      line-height: 24px;
       color: #ffffff;
       transition: 0.2s all;
       &:hover {
         opacity: 0.8;
       }
+      &:disabled {
+        cursor: progress;
+        background: #adadadce;
+        &:hover {
+          opacity: 1;
+        }
+      }
       @media (max-width: $breakpoint480) {
         width: 50vw;
         margin-top: 16px;
+      }
+    }
+    .form__input-sent-loading {
+      cursor: progress;
+      margin: 0 !important;
+      background: none !important;
+      &:hover {
+        opacity: 1;
       }
     }
   }
